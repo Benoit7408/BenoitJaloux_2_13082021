@@ -1,0 +1,57 @@
+html
+{
+margin:0;
+}
+
+main
+{
+    width: 95%;
+    margin:auto;
+}
+header
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+#logo
+{
+
+    width: 15%;
+    height: auto;
+}
+
+nav
+{
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 60%;
+}
+nav > ul
+{
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-evenly
+    
+}
+nav>ul>li 
+{
+    list-style-type: none;
+    
+}
+
+a{text-decoration: none;}
+
+a:hover
+{
+    border-top:2px #0065fc solid;
+    padding:15px;
+}
+a:active
+{
+    border-top:#0065fc;
+}
