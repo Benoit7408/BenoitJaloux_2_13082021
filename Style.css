@@ -14,19 +14,14 @@ header
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    
 }
-
 #logo
 {
-
     width: 15%;
     height: auto;
 }
-
 nav
 {
-    
     display: flex;
     flex-wrap: wrap;
     flex-basis: 60%;
@@ -36,7 +31,6 @@ nav > ul
     display: flex;
     flex-grow: 1;
     justify-content: space-evenly
-    
 }
 nav>ul>li 
 {
@@ -44,7 +38,10 @@ nav>ul>li
     
 }
 
-a{text-decoration: none;}
+a
+{
+    text-decoration: none;
+}
 
 a:hover
 {
@@ -54,4 +51,88 @@ a:hover
 a:active
 {
     border-top:#0065fc;
+}
+
+form > button
+{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-left: none;
+    border-color: #0065fc;
+    background-color: #0065fc;
+    padding: 5px;
+    color: white;
+    margin-left: -4px;
+}
+
+form > input
+{
+    border: 1px gray solid;
+    padding: 6px ;
+    margin-right: 0px;
+    border-right: none;
+    margin-left: -4px;
+    
+}
+
+form > i
+{
+    height: 16px;
+    border: 1px gray solid;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: gray;
+    padding: 7px;
+    padding-top: 5px;
+    margin-left: 5px;
+}
+.Filtre
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+   
+}
+.Filtre > ul
+{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+
+}
+.Filtre li
+{
+    list-style-type: none;
+    border: 1px #f2f2f2 solid;
+    padding-left: 10px;
+    padding-right: 20px;
+    border-radius: 25px;
+    margin-left: 20px;
+}
+
+.Filtre > ul > li > i
+{
+    font-weight: bold;
+    font-size: large;
+    padding: 12px;
+    color: #0065FC;
+    background-color: #DEEBFF;
+    border-radius: 25px;
+    margin-right: 15px;
+    margin-left: -18px;
+}
+
+.Filtre p
+{
+    width: 100%;
+    
+}
+.Filtre p i
+{
+    margin: 10px;
+    color: #0065fc;
+    border:1px gray solid;
+    background-color: white;
+    border-radius: 25px;
+    padding:6px 8px;
 }
