@@ -136,3 +136,71 @@ justify-content: space-between;
     border-radius: 25px;
     padding:6px 8px;
 }
+
+#Hebergement
+{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+   
+}
+
+#Nliste
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 65%;
+    background-color: #f2f2f2;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+    
+}
+
+#Pliste
+{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    background-color: #f2f2f2;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#Nliste > .loc
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 25%;
+    margin-left: 20px;
+    margin-right:20px;
+    justify-content: space-evenly;
+    border:4px white solid;
+    border-radius: 15px;
+    background-color: white;
+    
+   
+}
+
+#Pliste > .Poploc
+{
+    display: flex;
+    border:4px white solid;
+    border-radius: 15px;
+    background-color: white;
+    margin:10px;
+}
+
+#Nliste img
+{
+width: 100%;
+}
+
+#Pliste img
+{
+width: 100%;
+}
