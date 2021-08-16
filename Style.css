@@ -1,4 +1,4 @@
-html
+html,body
 {
 margin:0;
 }
@@ -41,14 +41,15 @@ nav>ul>li
 a
 {
     text-decoration: none;
+    color: black;
 }
 
-a:hover
+header a:hover
 {
     border-top:2px #0065fc solid;
     padding:15px;
 }
-a:active
+header a:active
 {
     border-top:#0065fc;
 }
@@ -142,10 +143,17 @@ justify-content: space-between;
     display: flex;
     flex-wrap: wrap; 
     justify-content: space-between;
+    align-items: flex-start;
    
 }
+#Nliste a
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
 
-#Nliste
+#Nliste 
 {
     display: flex;
     flex-wrap: wrap;
@@ -155,8 +163,6 @@ justify-content: space-between;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    
-    
 }
 
 #Pliste
@@ -171,7 +177,7 @@ justify-content: space-between;
     border-bottom-right-radius: 10px;
 }
 
-#Nliste > .loc
+#Nliste > .loc 
 {
     display: flex;
     flex-wrap: wrap;
@@ -182,25 +188,131 @@ justify-content: space-between;
     border:4px white solid;
     border-radius: 15px;
     background-color: white;
-    
-   
 }
 
 #Pliste > .Poploc
 {
     display: flex;
+    flex-wrap: wrap;
     border:4px white solid;
     border-radius: 15px;
     background-color: white;
     margin:10px;
 }
 
+#Pliste > .Poploc a
+{
+flex-basis: 30%;
+flex-grow: 1;
+}
+#Pliste figcaption
+{
+    flex-grow: 1;
+}
+
 #Nliste img
 {
-width: 100%;
+    display: flex;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
 }
 
 #Pliste img
 {
-width: 100%;
+    width: 150px;
+    height: 100%;
+    object-fit: cover;
+}
+
+#loisir 
+{
+    display: flex;
+    background-color: grey;
+}
+
+
+#loisir .visite
+{   display: flex;
+    flex-wrap: wrap;
+    flex-basis: 25%;
+    background-color: rgb(29, 24, 56);
+    
+}
+
+#loisir .visite figure
+{
+    
+    display: flex;
+    flex-wrap: wrap;
+    background-color: greenyellow;
+    flex-basis: 100%;
+    margin: 5%;
+}
+
+#loisir img
+{
+    display: flex;
+    flex-basis: 25%;
+   
+}
+.Poploc  i
+{
+    color: #0065fc;
+}
+
+.loc  i
+{
+    color: #0065fc;
+}
+
+#Nliste > figure:nth-of-type(2n+1) > figcaption > a > p > i:last-child
+{
+    color:#DEEBFF;
+}
+
+#Nliste > figure:nth-of-type(4) > figcaption > a > p > i:nth-of-type(1n+4)
+{
+    color:#DEEBFF;
+}
+
+#Pliste > figure:nth-of-type(1n+2) > figcaption > a > p > i:last-child
+{
+    color:#DEEBFF;
+}
+
+footer
+{
+    
+    margin: 0;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+[class*="Footer"]
+{
+    flex-grow: 1;
+}
+
+footer > [class*="Footer"] > ul > li
+{
+    list-style-type: none;
+}
+
+
+Footer h3
+{
+    margin-left: 40px;
+}
+
+.loc > a
+{
+    color: black;
+}
+
+.Poploc > a
+{
+    color: black;
 }
