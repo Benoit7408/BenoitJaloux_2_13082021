@@ -12,7 +12,7 @@
 </head>
 
 <body>
-        <header>
+        <header><!--Mon header contient le logo et la nav-->
             <img id="logo" src="images/logo/Reservia@3x.png" alt="Logo du site">
             <nav>
                 <ul>
@@ -22,20 +22,21 @@
                 <p> <a href="#inscrire">S'inscrire</a> </p>
             </nav>
         </header>
-
-        <section class="titres">
+                    <!--Je considere les trois éléments suivant comme distinct les uns des autres,
+                        il pourrait etre réunis dans une section plus générale -->
+        <section class="titres"><!--Ma section titre-->
             <H1>Trouver votre hebergement pour des vacance de rêve<br/></H1>
             <p>En plein centre ville ou en pleine nature</p>
         </section>
 
-        <form method="POST" action="#">
+        <form method="POST" action="#"><!--Mon champs de recherche-->
             <i class="fas fa-map-marker-alt"></i>
             <input type="search" name="ville" placeholder="Marseille,France">
             <button>Rechercher</button>
 
         </form>
         
-        <section class="Filtre">
+        <section class="Filtre"><!--Ma section filtre-->
             <h2>Filtres</h2>
             <ul>
                 <li><i class="fas fa-money-bill-wave"></i>Economique</li>
@@ -48,12 +49,21 @@
 
         </section>
     
-        <main>
+        <main><!--Le corp principale de la page, contient les id Hebergement et loisir-->
+
             <section id="Hebergement">
+                <!--Mon id hebergement contient les id Nliste et Pliste,
+                A l'interieur de Nliste, les figures sont des class loc: 
+                les images sont des ancres vers #hebergement, figcaption sont des ancres #Nliste.
+
+                A l'interieur de Pliste, les figures sont des class Poploc: 
+                les images sont des ancres vers #hebergement, figcaption sont des ancres #Nliste.
+                Les images et les figcaption sont des ancres vers Plistes
+                -->
 
                 <div id="Nliste">
 
-                    <a href="Hebergement"> <h2>Hebergement à Marseille</h2></a>
+                    <a href="#Hebergement"> <h2>Hebergement à Marseille</h2></a>
 
                         <figure class="loc">
                             <a href="#Nliste">
@@ -169,12 +179,12 @@
                                 </figcaption>
                         
                     </figure>
-
+                    <a id="moreH" href="#Hebergement"> <h3>Afficher plus</h3></a>
                 </div>
 
                 <div id="Pliste">
 
-                    <h2><a href=".Poploc"></a>Les plus populaires</h2>
+                   <a href=".Poploc"><h2>Les plus populaires</h2></a>
 
                     <figure class="Poploc">
                         <a href="#Pliste">
@@ -237,9 +247,10 @@
                 </div>
 
             </section>
-
+            <!--La section id loisir contient 4 class visite ensuite differencié par P1 P2 P3 ET P4
+            P1 et P3 identique, P2 et P4 identique, ancre sur image et figcation vers id loisir-->
             <section id="loisir">
-                <div class="visite">
+                <div class="visite P1">
                     <figure>
                         <a href="#loisir">
                             <img src="images/activites/Vieux_port.jpg" alt="vieux port">
@@ -251,8 +262,8 @@
                         </figcaption>
                     </figure>
                 </div>            
-                <div class="visite">
-                    <figure>
+                <div class="visite P2">
+                    <figure class="P2_1">
                         <a href="#loisir">
                             <img src="images/activites/Fort_de_Pomegues.jpg" alt="fort de pomegues">
                         </a>
@@ -263,7 +274,7 @@
                         </figcaption>
                     </figure>
                
-                    <figure>
+                    <figure class="P2_2">
                         <a href="#loisir">
                             <img src="images/activites/Frioul.jpg" alt="lac de frioul">
                         </a>
@@ -275,7 +286,7 @@
                     </figure>
                 </div>
 
-                <div class="visite">
+                <div class="visite P3">
                     <figure>
                         <a href="#loisir">
                             <img src="images/activites/Calanques.jpg" alt="parc nationnal des calanques">
@@ -286,7 +297,9 @@
                             </a>
                         </figcaption>
                     </figure>
-                    <figure>
+                </div>
+                <div class="visite P4">
+                    <figure class="P4_1">
                         <a href="#loisir">
                             <img src="images/activites/Notre-Dame_de_la_Garde.jpg" alt="Notre dame de la garde">
                         </a>
@@ -296,10 +309,8 @@
                             </a>
                         </figcaption>
                     </figure>
-                </div>
-
-                <div class="visite">
-                    <figure>
+                
+                    <figure class="P4_2">
                         <a href="#loisir">
                             <img src="images/activites/Parc_Longchamp.jpg" alt="parc longchamp">
                         </a>
@@ -313,7 +324,7 @@
             </section>
 
         </main>
-
+<!-- Le footer en 3 class differentes-->
         <footer>
             <div class="Footer_Apropos">
                 <h3>A propos</h3>
