@@ -302,7 +302,9 @@ flex-grow: 1;
     flex-wrap: wrap;
     background-color: grey;
     justify-content: space-between;
+    
 }
+
 
 #loisir > a
 {
@@ -312,21 +314,30 @@ flex-grow: 1;
 }
 
 /*  #loisir est divisé en 4 partie P, P2 et P4 sont divisé en 2 figure P2_1 et P2_4 */
-.P1{
-   
-    flex-basis: 24%;
-    
+.P1
+{
+    display:flex ;
+    flex-wrap: wrap;
+    flex-basis: 20%;
     background-color: rgb(29, 24, 56);
     border-radius: 15px;
+    height: 100%;
+   
 }
 .P1 figure{
+
     display: flex;
     flex-wrap: wrap;
     flex-basis: 100%;
     background-color: crimson;
     margin: 10px 0px;
+    
 }
 
+.P1 figure > a {
+
+    height: 400px;
+}
 .P1 img
 {
     display: flex;
@@ -336,11 +347,9 @@ flex-grow: 1;
     border-top-left-radius:15px ;
     border-top-right-radius: 15px;
     margin: 0;
+    max-height: 500px;
 }
-.P1 figure a
-{
-    height: 400px;
-}
+
 .P1 figure figcaption a
 {
     height: 100%;
@@ -354,112 +363,118 @@ flex-grow: 1;
     width: 30px;
     height: 50px;
     background-color: white;
-    align-items: flex-start;
+    
     border-bottom-left-radius:15px ;
     border-bottom-right-radius: 15px;
 }
 
 .P2{
+    flex-basis: 20%;
     display: flex;
     flex-wrap: wrap;
-    flex-basis: 24%;
-    align-items: flex-start;
+    
     background-color: rgb(29, 24, 56);
     border-radius: 15px;
-    justify-content: space-between;
+    height: 100%;
+    
+    
 }
 .P2 .P2_1
 {
     display: flex;
+    
     flex-wrap: wrap;
-    flex-grow: 1;
+    object-fit: cover;
     background-color: crimson;
     margin: 10px 0px;
-    max-height: 400px;
+
+    
 }
 figure.P2_1>a
 
 {
     display: flex;
-    height: 200px;
-    flex-basis: 100%;
-    overflow: hidden;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+
+.P2_1 figcaption
+{
+    flex-grow: 1;
+    background-color: white;
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius: 15px;
 }
 .P2_1 figcaption a
 
 {
-    height: 100%;
-    flex-basis: 100%;
+    justify-content: flex-start;
+    
 }
-
-.P2 .P2_1 img
+.P2_1>a>img
 {
     object-fit: cover;
     width: 100%;
+    height: 100%;
+    max-height: 200px;
     border-top-left-radius:15px ;
     border-top-right-radius: 15px;
-    flex-grow: 1;
+  
 }
 
-.P2 .P2_1 figcaption
-{
-    display: flex;
-    flex-grow: 1;
-    height: 50px;
-    background-color: white;
-    align-items: flex-start;
-    border-bottom-left-radius:15px;
-    border-bottom-right-radius: 15px;
-}
-.P2 .P2_2
+
+.P2_2
 {
     display: flex;
     flex-wrap: wrap;
-    flex-grow: 1;
+    flex-basis: 100%;
     background-color: crimson;
     margin: 10px 0px;
-    max-height: 200px;
+    align-content: flex-start;
+    height: 100%;
 }
 
-.P2 .P2_2 img
-{
-    object-fit: cover;
-    width: 100%;
-    border-top-left-radius:15px ;
-    border-top-right-radius: 15px;
-}
 
-.P2 .P2_2 figcaption
+.P2_2>a
+
 {
     display: flex;
+    flex-wrap: wrap;
+    flex-basis:100%;
+    
+}
+
+.P2_2 figcaption
+{
     flex-grow: 1;
-    height: 50px;
     background-color: white;
-    align-items: flex-start;
     border-bottom-left-radius:15px;
     border-bottom-right-radius: 15px;
-}
-figure.P2_2>a
-
-{
-    height: 100px;
-    flex-basis: 100%;
-    overflow: hidden;
 }
 .P2_2 figcaption a
 
 {
-    height: 100%;
-    flex-basis: 100%;
+    
 }
+.P2_2>a>img
+{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius:15px ;
+    border-top-right-radius: 15px;
+}
+
+
 .P3{
     display: flex;
     flex-wrap: wrap;
-    flex-basis: 24%;
-    align-items: flex-start;
+    flex-basis: 20%;
+    
     background-color: rgb(29, 24, 56);
     border-radius: 15px;
-    height: 500px;
+    height: 50%;
 }
 .P3 figure{
     display: flex;
@@ -500,100 +515,99 @@ figure.P2_2>a
     border-bottom-right-radius: 15px;
 }
 .P4{
+    flex-basis: 20%;
     display: flex;
     flex-wrap: wrap;
-    flex-basis: 24%;
-    align-items:flex-start;
+    
     background-color: rgb(29, 24, 56);
     border-radius: 15px;
-    height: 500px;
+    height: 100%;
+    
+    
 }
 .P4 .P4_1
 {
     display: flex;
+    
     flex-wrap: wrap;
-    flex-grow: 1;
+    object-fit: cover;
     background-color: crimson;
     margin: 10px 0px;
-    max-height: 300px;
+
+    
 }
 figure.P4_1>a
 
 {
-    height: 150px;
-    flex-basis: 100%;
-    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.P4_1 figcaption
+{
+    flex-grow: 1;
+    background-color: white;
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius: 15px;
 }
 .P4_1 figcaption a
 
 {
-    height: 100%;
-    flex-basis: 100%;
+    justify-content: flex-start;
+    
 }
-
-.P4 .P4_1 img
+.P4_1>a>img
 {
     object-fit: cover;
     width: 100%;
+    height: 100%;
+    max-height: 250px;
     border-top-left-radius:15px ;
     border-top-right-radius: 15px;
+  
 }
 
-.P4 .P4_1 figcaption
-{
-    display: flex;
-    flex-grow: 1;
-    height: 50px;
-    background-color: white;
-    align-items: flex-start;
-    border-bottom-left-radius:15px;
-    border-bottom-right-radius: 15px;
-}
-.P4 .P4_2
+
+.P4_2
 {
     display: flex;
     flex-wrap: wrap;
-    flex-grow: 1;
+    flex-basis: 100%;
     background-color: crimson;
     margin: 10px 0px;
-    max-height: 300px;
+    align-content: flex-start;
+    height: 100%;
 }
 
-.P4 .P4_2 img
-{
-    object-fit: cover;
-    width: 100%;
-    border-top-left-radius:15px ;
-    border-top-right-radius: 15px;
-}
 
-.P4 .P4_2 figcaption
+.P4_2>a
+
 {
     display: flex;
+    flex-wrap: wrap;
+    flex-basis:100%;
+    
+}
+
+.P4_2 figcaption
+{
     flex-grow: 1;
-    height: 50px;
     background-color: white;
-    align-items: flex-start;
     border-bottom-left-radius:15px;
     border-bottom-right-radius: 15px;
 }
-figure.P4_2>a
 
+.P4_2>a>img
 {
-    height: 150px;
-    flex-basis: 100%;
-    overflow: hidden;
-}
-.P4_2 figcaption a
-
-{
+    object-fit: cover;
+    width: 100%;
     height: 100%;
-    flex-basis: 100%;
+    border-top-left-radius:15px ;
+    border-top-right-radius: 15px;
+    max-height: 250px;
 }
-#loisir .visite figure figcaption h3
-{
-    margin-left:10px;
-}
+
 
 .Poploc  i
 {
