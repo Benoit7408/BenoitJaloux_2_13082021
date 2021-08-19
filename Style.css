@@ -114,7 +114,43 @@ justify-content: space-between;
     padding-right: 20px;
     border-radius: 25px;
     margin-left: 20px;
+   
 }
+.Filtre li:hover{
+    animation: couleur 1s;
+}
+@keyframes moove{
+    0%{
+        transform:translate(0,0);
+        
+    }
+    25% {
+        transform:translate(60px,-5px);
+       
+    }
+    50%{
+        transform:translate(120px,0px);
+    }
+    75% {
+        transform:translate(60px,5px);
+       
+    }
+    100%{
+        transform:translate(0,0);
+        color: red;
+    }
+}
+@keyframes couleur{
+    0%{
+        color: black;
+    }
+    100%{
+        color: red;
+        border:black 1px solid;
+    }
+}
+
+
 /*les icone et leur placements*/
 .Filtre > ul > li > i
 {
@@ -126,7 +162,10 @@ justify-content: space-between;
     border-radius: 25px;
     margin-right: 15px;
     margin-left: -18px;
+    
 }
+.Filtre > ul > li > i:hover
+{animation: moove 3s;}
 /*petit paragraphe 100% pour un retour a la ligne */
 .Filtre p
 {
@@ -177,26 +216,26 @@ justify-content: space-between;
     background-color: white;
     margin: 20px 20px;  
 }
-
-
+/*Toute les ancres de Nliste */
 #Nliste a 
 {
     display: flex;
     flex-wrap: wrap;
     flex-basis: 100%;
 }
-
+/* utilise l'espace disponible */
 #Nliste figcaption
 {
     display:flex;
     flex-grow: 1;
     margin: 0;
 }
+/* Créer une marge dans tout les elements enfant de figcaption */
 #Nliste figcaption *
 {
     margin:3px;
 }
-
+/* Pliste, enfant d'hebergement */
 #Pliste
 {
     display: flex;
@@ -208,7 +247,7 @@ justify-content: space-between;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-
+/* toutle les figure de Pliste */
 #Pliste > .Poploc
 {
     display: flex;
@@ -219,18 +258,18 @@ justify-content: space-between;
     margin:10px 10px;
     
 }
-
+/* creer une marge en dessous de afficher plus */
 #moreH
 {
     margin-bottom: 18px;
 }
-
+/* les ancres des figure utilisent l'espace disponible */
 #Pliste > .Poploc a
 {
 flex-basis: 30%;
 flex-grow: 1;
-
 }
+
 #Pliste figcaption
 {
     flex-grow: 1;
@@ -256,23 +295,27 @@ flex-grow: 1;
     border-bottom-left-radius: 15px;
 
 }
-
+/* Mon id loisir enfant de main */
 #loisir 
 {
     display: flex;
     flex-wrap: wrap;
     background-color: grey;
     justify-content: space-between;
-    
 }
 
+#loisir > a
+{
+    display:flex;
+    flex-wrap:wrap;
+    flex-basis: 100%;
+}
 
-
+/*  #loisir est divisé en 4 partie P, P2 et P4 sont divisé en 2 figure P2_1 et P2_4 */
 .P1{
-    display: flex;
-    flex-wrap: wrap;
+   
     flex-basis: 24%;
-    align-items: flex-start;
+    
     background-color: rgb(29, 24, 56);
     border-radius: 15px;
 }
@@ -294,9 +337,14 @@ flex-grow: 1;
     border-top-right-radius: 15px;
     margin: 0;
 }
-.P1 a:first-child
+.P1 figure a
 {
     height: 400px;
+}
+.P1 figure figcaption a
+{
+    height: 100%;
+    flex-basis: 100%;
 }
 
 .P1 figure figcaption
@@ -329,19 +377,28 @@ flex-grow: 1;
     margin: 10px 0px;
     max-height: 400px;
 }
-
-.P2_1 a:nth-child(1)
+figure.P2_1>a
 
 {
-    display:flex;
-   height: 200px;
+    display: flex;
+    height: 200px;
+    flex-basis: 100%;
+    overflow: hidden;
 }
+.P2_1 figcaption a
+
+{
+    height: 100%;
+    flex-basis: 100%;
+}
+
 .P2 .P2_1 img
 {
     object-fit: cover;
     width: 100%;
     border-top-left-radius:15px ;
     border-top-right-radius: 15px;
+    flex-grow: 1;
 }
 
 .P2 .P2_1 figcaption
@@ -382,13 +439,19 @@ flex-grow: 1;
     border-bottom-left-radius:15px;
     border-bottom-right-radius: 15px;
 }
-.P2_2 a:nth-child(1)
+figure.P2_2>a
 
 {
-    display:flex;
     height: 100px;
+    flex-basis: 100%;
+    overflow: hidden;
 }
+.P2_2 figcaption a
 
+{
+    height: 100%;
+    flex-basis: 100%;
+}
 .P3{
     display: flex;
     flex-wrap: wrap;
@@ -416,11 +479,16 @@ flex-grow: 1;
     margin: 0;
 }
 
-.P3 a:first-child
+.P3 figure a
 {
     height: 400px;
 }
 
+.P3 figure figcaption a
+{
+    height: 100%;
+    flex-basis: 100%;
+}
 .P3 figure figcaption
 {
     display: flex;
@@ -449,13 +517,20 @@ flex-grow: 1;
     margin: 10px 0px;
     max-height: 300px;
 }
-
-.P4_1 a:nth-child(1)
+figure.P4_1>a
 
 {
-    width: 100%;
-    max-height: 150px;
+    height: 150px;
+    flex-basis: 100%;
+    overflow: hidden;
 }
+.P4_1 figcaption a
+
+{
+    height: 100%;
+    flex-basis: 100%;
+}
+
 .P4 .P4_1 img
 {
     object-fit: cover;
@@ -502,15 +577,19 @@ flex-grow: 1;
     border-bottom-left-radius:15px;
     border-bottom-right-radius: 15px;
 }
-.P4_2 a:nth-child(1)
+figure.P4_2>a
 
 {
-   
-    width: 100%;
-    max-height: 150px;
+    height: 150px;
+    flex-basis: 100%;
     overflow: hidden;
 }
+.P4_2 figcaption a
 
+{
+    height: 100%;
+    flex-basis: 100%;
+}
 #loisir .visite figure figcaption h3
 {
     margin-left:10px;
@@ -525,7 +604,7 @@ flex-grow: 1;
 {
     color: #0065fc;
 }
-
+/* la selection de mes icone etoile */
 #Nliste > figure:nth-of-type(2n+1) > figcaption > a > p > i:last-child
 {
     color:#DEEBFF;
@@ -550,7 +629,7 @@ footer
     flex-wrap: wrap;
    
 }
-
+/* attribut la place dispo a toute mes classe qui on footer dans le nom */
 [class*="Footer"]
 {
     flex-grow: 1;
