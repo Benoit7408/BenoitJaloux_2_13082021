@@ -1,124 +1,9 @@
-html,body /*Je supprime les marges automatique */
-{
-margin:0;
+@font-face {
+    font-family: "Raleway";
+    src: url(fonts/Raleway-VariableFont_wght.ttf) format("truetype"),
+        url(fonts/Raleway-Italic-VariableFont_wght.ttf) format("truetype");
 }
-/*J'utilise 95% de la page et je centre le main*/
-main
-{
-    width: 95%;
-    margin:auto;
-}
-/*Header en flex, retour a la ligne pour le responsive,supprime le strech axe secondaire et espacé sur axe pricinpale */
-header
-{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-/*taille du logo */
-#logo
-{
-    width: 15%;
-    height: auto;
-}
-/*ma nav prend 60 % de mon header ou va à la ligne( flex parent)
-,les enfants vont à la ligne si besoin */
-nav
-{
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: 60%;
-}
-/*ul en ligne et prend la place maximale accordé tout en ayant le meme espace avant apres et entre chaques enfants*/
-nav > ul
-{
-    display: flex;
-    flex-grow: 1;
-    justify-content: space-evenly
-}
-/*cache les puces*/
-nav>ul>li 
-{
-    list-style-type: none;
-}
-/*supprime le soulignement des ancres sur tout mon code*/
-a
-{
-    text-decoration: none;   
-}
-/*affiche une bordure au passage de la souris */
-header a:hover
-{
-    border-top:2px #0065fc solid;
-    padding:15px;
-}
-/*Affiche la bordure quand le lien est activé */
-header a:active
-{
-    border-top:#0065fc;
-}
-/*Mon bouton de recherche dans form */
-form > button
-{
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border-left: none;
-    border-color: #0065fc;
-    background-color: #0065fc;
-    padding: 5px;
-    color: white;
-    margin-left: -4px;
-}
-/*mon champ de recherche */
-form > input
-{
-    border: 1px gray solid;
-    padding: 6px ;
-    margin-right: 0px;
-    border-right: none;
-    margin-left: -4px;
-}
-/*Mon icone localisation */
-form > i
-{
-    height: 16px;
-    border: 1px gray solid;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    background-color: gray;
-    padding: 7px;
-    padding-top: 5px;
-    margin-left: 5px;
-}
-/*ma classe filtre et la suppression du strech axe secondaire */
-.Filtre
-{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-/*ma liste a puce en ligne */
-.Filtre > ul
-{
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-}
-/*bordure des élement de ma liste */
-.Filtre li
-{
-    list-style-type: none;
-    border: 1px #f2f2f2 solid;
-    padding-left: 10px;
-    padding-right: 20px;
-    border-radius: 25px;
-    margin-left: 20px;
-   
-}
-.Filtre li:hover{
-    animation: couleur 1s;
-}
+
 @keyframes moove{
     0%{
         transform:translate(0,0);
@@ -138,6 +23,7 @@ justify-content: space-between;
     100%{
         transform:translate(0,0);
         color: red;
+        
     }
 }
 @keyframes couleur{
@@ -145,42 +31,162 @@ justify-content: space-between;
         color: black;
     }
     100%{
-        color: red;
+        color:white;
+        background-color:black ;
         border:black 1px solid;
+        animation-fill-mode: forwards;
     }
 }
+/*Je supprime les marges automatique , je charge ma police*/
+html,body {
+    font-family: "raleway";
+    margin:0;
+}
 
+/*J'utilise 95% de la page et je centre tout les éléments sauf le footer*/
+main, header,.titres,form,.Filtre{
+    width: 95%;
+    margin:auto;
+}
+
+/* j'ecrase la couleur par defaut de mes ancres et je supprime le soulignement.
+Suppresion des puces de li */
+a{
+    color:black;
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+/*Header en flex, retour a la ligne pour le responsive,supprime le strech axe secondaire et espace sur axe pricinpale,
+creation d'une marge top */
+header{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+/*taille du logo */
+#logo{
+    width: 10%;
+    height: auto;
+}
+/*ma nav prend 40 % de mon header ou va à la ligne( flex parent)
+,les enfants vont à la ligne si besoin */
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 40%;
+}
+/*ul en ligne et prend la place maximale accordé tout en ayant le meme espace avant apres et entre chaques enfants*/
+nav  ul{
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-evenly
+}
+
+/*affiche une bordure au passage de la souris */
+header a:hover{
+    border-top:2px #0065fc solid;
+    padding:30px;
+    color: #0065fc;
+}
+header p a{
+    color: #0065fc;
+    font-weight:700;
+}
+/*Mon bouton de recherche dans form */
+form  button{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left: none;
+    border-color: #0065fc;
+    background-color: #0065fc;
+    padding:5px 10px;
+    color: white;
+    font-weight: 600;
+    margin-left: -4px;
+}
+/*mon champ de recherche */
+form input{
+    border: 2px #f2f2f2 solid;
+    padding: 6px ;
+    margin-right: 0px;
+    border-right: none;
+    margin-left: -4px;
+}
+/*Mon icone localisation */
+form > i{
+    height: 16px;
+    border: 2px #f2f2f2 solid;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 7px;
+    padding-top: 5px;
+    margin-left: 5px;
+}
+::placeholder{
+    font-family: "Raleway";
+    color: BLACK;
+    font-weight: 900;
+}
+/*ma classe filtre et la suppression du strech axe secondaire */
+.Filtre
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+/*ma liste a puce en ligne */
+.Filtre > ul
+{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+/*bordure des élement de ma liste */
+.Filtre li
+{
+    font-weight: 500;
+    border: 2px #f2f2f2 solid;
+    padding: 0px 20px;
+    border-radius: 25px;
+    margin-left: 25px;
+}
+.Filtre li:hover{
+    animation: couleur 0.5s;
+    animation-fill-mode: forwards;
+}
+.Filtre i:active{
+    animation: moove 3s;
+}
 
 /*les icone et leur placements*/
-.Filtre > ul > li > i
-{
-    font-weight: bold;
-    font-size: large;
+.Filtre i{
     padding: 12px;
     color: #0065FC;
     background-color: #DEEBFF;
     border-radius: 25px;
     margin-right: 15px;
-    margin-left: -18px;
-    
+    margin-left: -20px;
+    border: 2px #DEEBFF solid;
 }
-.Filtre > ul > li > i:hover
-{animation: moove 3s;}
 /*petit paragraphe 100% pour un retour a la ligne */
-.Filtre p
+.Filtre>p
 {
-    width: 100%;
+    width: 95%;
+}
+.Filtre >p>i{
+    background-color: white;
+    border:2px #f2f2f2 solid;
+    padding: 5px 10px;
+    margin:10px 5px 20px 0px;
 }
 
-.Filtre p i
-{
-    margin: 10px;
-    color: #0065fc;
-    border:1px gray solid;
-    background-color: white;
-    border-radius: 25px;
-    padding:6px 8px;
-}
 /*Hebergement en ligne et wrap, supprime le stretch et espaceNliste et pliste */
 #Hebergement
 {
@@ -267,7 +273,7 @@ justify-content: space-between;
 #Pliste > .Poploc a
 {
 flex-basis: 30%;
-flex-grow: 1;
+
 }
 
 #Pliste figcaption
@@ -452,11 +458,7 @@ figure.P2_1>a
     border-bottom-left-radius:15px;
     border-bottom-right-radius: 15px;
 }
-.P2_2 figcaption a
 
-{
-    
-}
 .P2_2>a>img
 {
     object-fit: cover;
@@ -466,155 +468,7 @@ figure.P2_1>a
     border-top-right-radius: 15px;
 }
 
-
-.P3{
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: 20%;
-    
-    background-color: rgb(29, 24, 56);
-    border-radius: 15px;
-    height: 50%;
-}
-.P3 figure{
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: 100%;
-    background-color: crimson;
-    margin: 10px 0px;
-}
-.P3 img
-{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-top-left-radius:15px ;
-    border-top-right-radius: 15px;
-    margin: 0;
-}
-
-.P3 figure a
-{
-    height: 400px;
-}
-
-.P3 figure figcaption a
-{
-    height: 100%;
-    flex-basis: 100%;
-}
-.P3 figure figcaption
-{
-    display: flex;
-    flex-grow: 1;
-    width: 30px;
-    height: 50px;
-    background-color: white;
-    border-bottom-left-radius:15px ;
-    border-bottom-right-radius: 15px;
-}
-.P4{
-    flex-basis: 20%;
-    display: flex;
-    flex-wrap: wrap;
-    
-    background-color: rgb(29, 24, 56);
-    border-radius: 15px;
-    height: 100%;
-    
-    
-}
-.P4 .P4_1
-{
-    display: flex;
-    
-    flex-wrap: wrap;
-    object-fit: cover;
-    background-color: crimson;
-    margin: 10px 0px;
-
-    
-}
-figure.P4_1>a
-
-{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.P4_1 figcaption
-{
-    flex-grow: 1;
-    background-color: white;
-    border-bottom-left-radius:15px;
-    border-bottom-right-radius: 15px;
-}
-.P4_1 figcaption a
-
-{
-    justify-content: flex-start;
-    
-}
-.P4_1>a>img
-{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    max-height: 250px;
-    border-top-left-radius:15px ;
-    border-top-right-radius: 15px;
-  
-}
-
-
-.P4_2
-{
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: 100%;
-    background-color: crimson;
-    margin: 10px 0px;
-    align-content: flex-start;
-    height: 100%;
-}
-
-
-.P4_2>a
-
-{
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis:100%;
-    
-}
-
-.P4_2 figcaption
-{
-    flex-grow: 1;
-    background-color: white;
-    border-bottom-left-radius:15px;
-    border-bottom-right-radius: 15px;
-}
-
-.P4_2>a>img
-{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    border-top-left-radius:15px ;
-    border-top-right-radius: 15px;
-    max-height: 250px;
-}
-
-
-.Poploc  i
-{
-    color: #0065fc;
-}
-
-.loc  i
+#Hebergement  i
 {
     color: #0065fc;
 }
@@ -652,6 +506,7 @@ footer
 footer > [class*="Footer"] > ul > li
 {
     list-style-type: none;
+    padding: 5px;
 }
 
 
@@ -659,17 +514,4 @@ Footer h3
 {
     margin-left: 40px;
 }
-
-.loc > a
-{
-    color: black;
-}
-
-.Poploc > a
-{
-    color: black;
-}
-
-
-
 
