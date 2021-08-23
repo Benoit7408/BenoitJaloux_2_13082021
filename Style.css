@@ -193,7 +193,11 @@ justify-content: space-between;
     display: flex;
     flex-wrap: wrap; 
     justify-content: space-between;
-    align-items: flex-start;
+}
+
+#Hebergement  i
+{
+    color: #0065fc;
 }
 /*taille de Nliste, arrondi de bordure... */
 #Nliste 
@@ -208,38 +212,62 @@ justify-content: space-between;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+#Nliste_titre 
+{
+    flex: 0 100%;
+    margin: 10px;
+}
+
 
 /*taille de base , utilise espace max, bordure ... */
 #Nliste > .loc 
 {
     display: flex;
     flex-wrap: wrap;
-    flex-basis: 20%;
-    flex-grow: 1;
+    flex-basis: 30%;
     justify-content: space-between;
-    border:3px white solid;
+    border:1px white solid;
     border-radius: 15px;
     background-color: white;
-    margin: 20px 20px;  
+    margin: 10px 10px;  
 }
-/*Toute les ancres de Nliste */
-#Nliste a 
+
+.A_image
 {
-    display: flex;
-    flex-wrap: wrap;
     flex-basis: 100%;
 }
+
+#Nliste img
+{
+    display: flex;
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-top-left-radius:15px ;
+    border-top-right-radius: 15px;
+}
+
 /* utilise l'espace disponible */
 #Nliste figcaption
 {
-    display:flex;
     flex-grow: 1;
     margin: 0;
 }
 /* Créer une marge dans tout les elements enfant de figcaption */
-#Nliste figcaption *
+#Nliste figcaption>p
 {
-    margin:3px;
+    margin-left:10px;
+}
+#Nliste figcaption>a *
+{
+    margin-left:10px;
+}
+
+/* creer une marge en dessous de afficher plus */
+#moreH
+{
+   flex: 0 100%;
+   margin: 10px;
 }
 /* Pliste, enfant d'hebergement */
 #Pliste
@@ -253,48 +281,55 @@ justify-content: space-between;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+
+#Pliste_titre
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+#Pliste_titre>a>i{
+    color: black;
+}
+
 /* toutle les figure de Pliste */
 #Pliste > .Poploc
 {
     display: flex;
-    flex-wrap: wrap;
-    border:3px white solid;
+    border:1px white solid;
     border-radius: 15px;
     background-color: white;
     margin:10px 10px;
-    
 }
-/* creer une marge en dessous de afficher plus */
-#moreH
-{
-    margin-bottom: 18px;
-}
-/* les ancres des figure utilisent l'espace disponible */
-#Pliste > .Poploc a
-{
-flex-basis: 30%;
 
+.Poploc>figcaption>p
+{
+    margin-left:10px;
+}
+
+.Poploc>figcaption>a *
+{
+    margin-left:10px;
+}
+
+/* les ancres des figure utilisent l'espace disponible */
+.A_POPimage
+{
+flex-basis: 40%;
+flex-grow: 1;
 }
 
 #Pliste figcaption
 {
-    flex-grow: 1;
-}
-
-#Nliste img
-{
-    display: flex;
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
-    border-top-left-radius:15px ;
-    border-top-right-radius: 15px;
+    flex-basis:60%;
 }
 
 #Pliste img
 {
     width: 100%;
-    height: 150px;
+    height: 170px;
     object-fit: cover;
     overflow: hidden;
     border-top-left-radius: 15px;
@@ -312,178 +347,177 @@ flex-basis: 30%;
 }
 
 
-#loisir > a
+#L_titre
 {
-    display:flex;
-    flex-wrap:wrap;
     flex-basis: 100%;
+    margin:10px;
 }
 
 /*  #loisir est divisé en 4 partie P, P2 et P4 sont divisé en 2 figure P2_1 et P2_4 */
-.P1
-{
-    display:flex ;
-    flex-wrap: wrap;
-    flex-basis: 20%;
+.P1{
+    display: flex;
+    
+    flex-basis: 22%;
     background-color: rgb(29, 24, 56);
     border-radius: 15px;
-    height: 100%;
-   
+    padding: 15px 15px;
+    margin: 0;
+}
+
+
+.P2
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 22%;
+    background-color: rgb(29, 24, 56);
+    border-radius: 15px;
+    padding: 15px 15px;
+    margin:0;
 }
 .P1 figure{
-
-    display: flex;
-    flex-wrap: wrap;
+    
     flex-basis: 100%;
+    height: 400px;
     background-color: crimson;
-    margin: 10px 0px;
+    margin:0;
     
 }
 
-.P1 figure > a {
-
-    height: 400px;
+.P1 figure >.A_Limage {
+    display: flex;
+    height: 370px;
+    width: 100%;
+    
 }
 .P1 img
-{
+{    
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 370px;
     object-fit: cover;
-    border-top-left-radius:15px ;
+    border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    margin: 0;
-    max-height: 500px;
+    
 }
-
-.P1 figure figcaption a
+    
+.P1 a
 {
-    height: 100%;
-    flex-basis: 100%;
+    height: 40px;
+    display: block;
+   
 }
 
 .P1 figure figcaption
 {
-    display: flex;
-    flex-grow: 1;
-    width: 30px;
-    height: 50px;
+    display: block;
     background-color: white;
-    
     border-bottom-left-radius:15px ;
     border-bottom-right-radius: 15px;
 }
 
-.P2{
-    flex-basis: 20%;
-    display: flex;
-    flex-wrap: wrap;
+
+
+.P1 h3
+{margin: 0;}
+
+
+.P2_1 
+    {
+    flex-basis: 60%;
     
-    background-color: rgb(29, 24, 56);
-    border-radius: 15px;
-    height: 100%;
-    
-    
-}
-.P2 .P2_1
-{
-    display: flex;
-    
-    flex-wrap: wrap;
-    object-fit: cover;
     background-color: crimson;
-    margin: 10px 0px;
-
-    
+    margin:0 0 30px 0;
+    width: 100%;
 }
-figure.P2_1>a
 
-{
+.P2_1 .A_Limage {
     display: flex;
-    flex-wrap: wrap;
+    height: 200px;
     width: 100%;
     
 }
-
-.P2_1 figcaption
-{
+.P2_1 img
+{    
+    display: flex;
+    width: 100%;
     flex-grow: 1;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    
+}
+
+.P2_1 a
+{
+    height: 40px;
+    display: block;
+   
+}
+
+.P2_1  figcaption
+{
+    display: block;
     background-color: white;
-    border-bottom-left-radius:15px;
+    border-bottom-left-radius:15px ;
     border-bottom-right-radius: 15px;
 }
-.P2_1 figcaption a
 
-{
-    justify-content: flex-start;
+.P2_2 {
     
-}
-.P2_1>a>img
-{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    max-height: 200px;
-    border-top-left-radius:15px ;
-    border-top-right-radius: 15px;
-  
-}
-
-
-.P2_2
-{
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: 100%;
+    flex-basis: 40%;
+    
     background-color: crimson;
-    margin: 10px 0px;
-    align-content: flex-start;
-    height: 100%;
+    margin:0;
+    width: 100%;
 }
 
-
-.P2_2>a
-
-{
+.P2_2 >.A_Limage {
     display: flex;
-    flex-wrap: wrap;
-    flex-basis:100%;
+    height: 100px;
+    width: 100%;
     
+}
+.P2_2 img
+{    
+    display: flex;
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    
+}
+
+.P2_2 a
+{
+    height: 40px;
+    display: block;
+   
 }
 
 .P2_2 figcaption
 {
-    flex-grow: 1;
+    display: block;
     background-color: white;
-    border-bottom-left-radius:15px;
+    border-bottom-left-radius:15px ;
     border-bottom-right-radius: 15px;
 }
-
-.P2_2>a>img
-{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    border-top-left-radius:15px ;
-    border-top-right-radius: 15px;
-}
-
-#Hebergement  i
-{
-    color: #0065fc;
-}
+.P2 h3
+{margin: 0;}
 /* la selection de mes icone etoile */
-#Nliste > figure:nth-of-type(2n+1) > figcaption > a > p > i:last-child
+#Nliste > figure:nth-of-type(2n+1) > figcaption > p > i:last-child
 {
     color:#DEEBFF;
 }
 
-#Nliste > figure:nth-of-type(4) > figcaption > a > p > i:nth-of-type(1n+4)
+#Nliste > figure:nth-of-type(4) > figcaption > p > i:nth-of-type(1n+4)
 {
     color:#DEEBFF;
 }
 
-#Pliste > figure:nth-of-type(1n+2) > figcaption > a > p > i:last-child
+#Pliste > figure:nth-of-type(1n+2) > figcaption > p > i:last-child
 {
     color:#DEEBFF;
 }
