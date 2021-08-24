@@ -420,7 +420,10 @@ flex-grow: 1;
 
 
 .P1 h3
-{margin: 0;}
+{
+    margin: 0;
+    padding: 10px;
+}
 
 
 .P2_1 
@@ -469,7 +472,7 @@ flex-grow: 1;
     flex-basis: 40%;
     
     background-color: crimson;
-    margin:0;
+    margin:0 0 30px 0;
     width: 100%;
 }
 
@@ -505,7 +508,109 @@ flex-grow: 1;
     border-bottom-right-radius: 15px;
 }
 .P2 h3
-{margin: 0;}
+{
+    margin: 0;
+    padding: 10px;
+}
+.P2Bis
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 22%;
+    background-color: rgb(29, 24, 56);
+    border-radius: 15px;
+    padding: 15px 15px;
+    margin:0;
+}
+.P2Bis>.P2_1 
+    {
+    flex-basis: 40%;
+    
+    background-color: crimson;
+    margin:0 0 30px 0 ;
+    width: 100%;
+}
+
+.P2Bis>.P2_1 .A_Limage {
+    display: flex;
+    height: 100px;
+    width: 100%;
+    
+}
+.P2Bis>.P2_1 img
+{    
+    display: flex;
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    
+}
+
+.P2Bis>.P2_1 a
+{
+    height: 40px;
+    display: block;
+   
+}
+
+.P2Bis>.P2_1  figcaption
+{
+    display: block;
+    background-color: white;
+    border-bottom-left-radius:15px ;
+    border-bottom-right-radius: 15px;
+}
+
+.P2Bis>.P2_2 {
+    
+    flex-basis: 60%;
+    
+    background-color: crimson;
+    margin:0 0 30PX 0;
+    width: 100%;
+}
+
+.P2Bis>.P2_2 >.A_Limage {
+    display: flex;
+    height: 200px;
+    width: 100%;
+    
+}
+.P2Bis>.P2_2 img
+{    
+    display: flex;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    
+}
+
+.P2Bis>.P2_2 a
+{
+    height: 40px;
+    display: block;
+   
+}
+
+.P2Bis>.P2_2 figcaption
+{
+    display: block;
+    background-color: white;
+    border-bottom-left-radius:15px ;
+    border-bottom-right-radius: 15px;
+}
+.P2Bis h3
+{
+    margin: 0;
+    padding: 10px;
+}
+
+
 /* la selection de mes icone etoile */
 #Nliste > figure:nth-of-type(2n+1) > figcaption > p > i:last-child
 {
