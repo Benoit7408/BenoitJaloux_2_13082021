@@ -444,7 +444,7 @@ flex-grow: 1;
 .loisir2>.A_Limage>img
 {
     
-    object-position: 0 -75px;   
+    object-position: 0 -100px;   
 }
 
 .loisir6>.A_Limage>img{
@@ -531,4 +531,84 @@ Footer h3
 {
     margin-left: 40px;
 }
+
+@media (max-width:1100px)
+{
+    .P1{
+        flex-basis: 45%;
+    }
+    
+    #loisir .loisir1 img{
+        object-position: -50px -50px;
+    }
+
+    .P2{
+        flex-basis: 45%;
+    }
+    .loisir2>.A_Limage{
+        flex-grow: 1;
+    }
+    #loisir .loisir2 img{
+        object-position: 0 -200px;
+    }
+    #loisir .loisir3 img{
+        object-position: 0 -70px;
+    }
+
+    #loisir .loisir4 img{
+        object-position: -140px -50px;
+    }
+    .P2Bis{
+        flex-basis: 45%;
+    }
+
+    .loisir5>.A_Limage{
+        flex-grow: 1;
+    }
+    #loisir .loisir5 img{
+        object-position: 0 -30px;
+    }
+
+    .loisir6 .A_Limage{
+        flex-grow: 1;
+    }
+    #loisir .loisir6 img{
+        object-position: 0 -70px;
+    }
+
+    nav{flex-basis:70%}
+
+    #Nliste{
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+    #Pliste{
+        flex-basis: 100%;
+    }
+    .Filtre{flex-basis: 10%;}
+    .Filtre h2{margin: 40px auto ;}
+    .Filtre ul li{margin: 10px;}
+    .titres{width:80%;
+            }
+    form{width: 40%;}
+}
+
+@media (max-width:770px){
+    nav>ul{
+        order: 2;
+        flex-basis: 100%;
+    }
+    nav{flex-basis: 100%;
+        flex-wrap: wrap;
+        
+    }
+
+    #logo{
+        display: none;
+    }
+}
+
+
+
+
 
