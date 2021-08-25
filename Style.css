@@ -341,9 +341,9 @@ flex-grow: 1;
 {
     display: flex;
     flex-wrap: wrap;
-    background-color: grey;
-    justify-content: space-between;
     
+    align-items:flex-start;
+    justify-content: space-between;
 }
 
 
@@ -353,258 +353,126 @@ flex-grow: 1;
     margin:10px;
 }
 
-/*  #loisir est divisé en 4 partie P, P2 et P4 sont divisé en 2 figure P2_1 et P2_4 */
+.P1,
+.P2,
+.P2bis{padding: 0 0 100px 0;}
+
 .P1{
     display: flex;
-    
+    flex-direction: column;
     flex-basis: 22%;
-    background-color: rgb(29, 24, 56);
+    
     border-radius: 15px;
-    padding: 15px 15px;
-    margin: 0;
 }
-
 
 .P2
 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    
     flex-basis: 22%;
-    background-color: rgb(29, 24, 56);
+    
     border-radius: 15px;
-    padding: 15px 15px;
+    
     margin:0;
 }
-.P1 figure{
-    
-    flex-basis: 100%;
-    height: 400px;
-    background-color: crimson;
-    margin:0;
-    
-}
 
-.P1 figure >.A_Limage {
-    display: flex;
-    height: 370px;
-    width: 100%;
-    
-}
-.P1 img
-{    
-    display: flex;
-    width: 100%;
-    height: 370px;
-    object-fit: cover;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    
-}
-    
-.P1 a
-{
-    height: 40px;
-    display: block;
-   
-}
-
-.P1 figure figcaption
-{
-    display: block;
-    background-color: white;
-    border-bottom-left-radius:15px ;
-    border-bottom-right-radius: 15px;
-}
-
-
-
-.P1 h3
-{
-    margin: 0;
-    padding: 10px;
-}
-
-
-.P2_1 
-    {
-    flex-basis: 60%;
-    
-    background-color: crimson;
-    margin:0 0 30px 0;
-    width: 100%;
-}
-
-.P2_1 .A_Limage {
-    display: flex;
-    height: 200px;
-    width: 100%;
-    
-}
-.P2_1 img
-{    
-    display: flex;
-    width: 100%;
-    flex-grow: 1;
-    object-fit: cover;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    
-}
-
-.P2_1 a
-{
-    height: 40px;
-    display: block;
-   
-}
-
-.P2_1  figcaption
-{
-    display: block;
-    background-color: white;
-    border-bottom-left-radius:15px ;
-    border-bottom-right-radius: 15px;
-}
-
-.P2_2 {
-    
-    flex-basis: 40%;
-    
-    background-color: crimson;
-    margin:0 0 30px 0;
-    width: 100%;
-}
-
-.P2_2 >.A_Limage {
-    display: flex;
-    height: 100px;
-    width: 100%;
-    
-}
-.P2_2 img
-{    
-    display: flex;
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    
-}
-
-.P2_2 a
-{
-    height: 40px;
-    display: block;
-   
-}
-
-.P2_2 figcaption
-{
-    display: block;
-    background-color: white;
-    border-bottom-left-radius:15px ;
-    border-bottom-right-radius: 15px;
-}
-.P2 h3
-{
-    margin: 0;
-    padding: 10px;
-}
 .P2Bis
 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    
     flex-basis: 22%;
-    background-color: rgb(29, 24, 56);
+    
     border-radius: 15px;
-    padding: 15px 15px;
+    
     margin:0;
 }
-.P2Bis>.P2_1 
-    {
-    flex-basis: 40%;
-    
-    background-color: crimson;
-    margin:0 0 30px 0 ;
-    width: 100%;
+
+
+.loisir1>.A_Limage,
+.loisir2>.A_Limage,
+.loisir3>.A_Limage,
+.loisir4>.A_Limage,
+.loisir5>.A_Limage,
+.loisir6>.A_Limage
+{
+    height: 100%;
+    display: contents;
 }
 
-.P2Bis>.P2_1 .A_Limage {
-    display: flex;
-    height: 100px;
+.loisir1>.A_Limage>img,
+.loisir2>.A_Limage>img,
+.loisir3>.A_Limage>img,
+.loisir4>.A_Limage>img,
+.loisir5>.A_Limage>img,
+.loisir6>.A_Limage>img
+{
     width: 100%;
-    
-}
-.P2Bis>.P2_1 img
-{    
-    display: flex;
-    width: 100%;
-    height: 100px;
     object-fit: cover;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    
 }
+.loisir1,
+.loisir4{
 
-.P2Bis>.P2_1 a
-{
-    height: 40px;
-    display: block;
-   
-}
-
-.P2Bis>.P2_1  figcaption
-{
-    display: block;
-    background-color: white;
-    border-bottom-left-radius:15px ;
-    border-bottom-right-radius: 15px;
-}
-
-.P2Bis>.P2_2 {
-    
-    flex-basis: 60%;
-    
-    background-color: crimson;
-    margin:0 0 30PX 0;
-    width: 100%;
-}
-
-.P2Bis>.P2_2 >.A_Limage {
     display: flex;
-    height: 200px;
+    flex-wrap: wrap;
     width: 100%;
-    
+    height: 380px;
+    margin: 0;
 }
-.P2Bis>.P2_2 img
-{    
-    display: flex;
-    width: 100%;
-    height: 200px;
+.loisir1>.A_Limage>img,
+.loisir4>.A_Limage>img
+{
+    height: 380px;
+    margin: auto;
     object-fit: cover;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    
+}
+.loisir2,
+.loisir6{
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 200px;
+    margin: 0;
+}
+.loisir2>.A_Limage>img,
+.loisir6>.A_Limage>img{
+    height: 200px;
+    margin: auto;   
+}
+.loisir3,
+.loisir5{
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 120px;
+    margin: 0;
+}
+.loisir3>.A_Limage>img,
+.loisir5>.A_Limage>img{
+    height: 120px;
+    margin: auto;   
 }
 
-.P2Bis>.P2_2 a
-{
-    height: 40px;
-    display: block;
-   
-}
+.loisir2{margin: 0 0 30px 0;}
+.loisir3{margin: 30px 0 0 0;}
+.loisir5{margin: 0 0 30px 0;}
+.loisir6{margin: 30px 0 0 0;}
 
-.P2Bis>.P2_2 figcaption
-{
-    display: block;
+#loisir figcaption{
     background-color: white;
-    border-bottom-left-radius:15px ;
+    width: 100%;
+    border: 1px #f2f2f2 solid;
+    border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
-.P2Bis h3
+
+#loisir h2{margin: 0;}
+#loisir h3
 {
     margin: 0;
     padding: 10px;
