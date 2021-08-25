@@ -360,8 +360,8 @@ flex-grow: 1;
 .P1{
     display: flex;
     flex-direction: column;
-    flex-basis: 22%;
-    
+    flex-basis: 23%;
+    margin: 10px;
     border-radius: 15px;
 }
 
@@ -369,24 +369,23 @@ flex-grow: 1;
 {
     display: flex;
     flex-direction: column;
-    
-    flex-basis: 22%;
+    margin: 10px;
+    flex-basis: 23%;
     
     border-radius: 15px;
     
-    margin:0;
 }
 
 .P2Bis
 {
     display: flex;
     flex-direction: column;
-    
-    flex-basis: 22%;
+    margin: 10px;
+    flex-basis: 23%;
     
     border-radius: 15px;
     
-    margin:0;
+    
 }
 
 
@@ -398,7 +397,8 @@ flex-grow: 1;
 .loisir6>.A_Limage
 {
     height: 100%;
-    display: contents;
+    display: flex;
+    overflow: hidden;
 }
 
 .loisir1>.A_Limage>img,
@@ -412,22 +412,25 @@ flex-grow: 1;
     object-fit: cover;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    margin: auto;
 }
 .loisir1,
 .loisir4{
-
+    
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     height: 380px;
     margin: 0;
+    
 }
 .loisir1>.A_Limage>img,
 .loisir4>.A_Limage>img
 {
-    height: 380px;
-    margin: auto;
+    height: 440px;
     object-fit: cover;
+    object-position: -200px 0;
+
 }
 .loisir2,
 .loisir6{
@@ -435,13 +438,19 @@ flex-grow: 1;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 200px;
-    margin: 0;
+    height: 180px;
+    
 }
-.loisir2>.A_Limage>img,
+.loisir2>.A_Limage>img
+{
+    
+    object-position: 0 -75px;   
+}
+
 .loisir6>.A_Limage>img{
-    height: 200px;
-    margin: auto;   
+    object-position: 0 0;
+    overflow: hidden;
+    height: 245px;
 }
 .loisir3,
 .loisir5{
@@ -450,28 +459,29 @@ flex-grow: 1;
     flex-wrap: wrap;
     width: 100%;
     height: 120px;
-    margin: 0;
+   
 }
 .loisir3>.A_Limage>img,
 .loisir5>.A_Limage>img{
-    height: 120px;
-    margin: auto;   
+    
+   object-position: 0 -5px; 
 }
 
-.loisir2{margin: 0 0 30px 0;}
+.loisir2{margin: 0 0 50px 0;}
 .loisir3{margin: 30px 0 0 0;}
-.loisir5{margin: 0 0 30px 0;}
+.loisir5{margin: 0 0 50px 0;}
 .loisir6{margin: 30px 0 0 0;}
 
 #loisir figcaption{
     background-color: white;
     width: 100%;
+    margin: auto;
     border: 1px #f2f2f2 solid;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
 
-#loisir h2{margin: 0;}
+#loisir h2{margin: 30px 0 0 0;}
 #loisir h3
 {
     margin: 0;
