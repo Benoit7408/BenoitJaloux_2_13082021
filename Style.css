@@ -48,7 +48,7 @@ main, header,.titres,form,.Filtre{
     width: 95%;
     margin:auto;
 }
-
+.logoM{display: none;}
 /* j'ecrase la couleur par defaut de mes ancres et je supprime le soulignement.
 Suppresion des puces de li */
 a{
@@ -399,6 +399,7 @@ flex-grow: 1;
     height: 100%;
     display: flex;
     overflow: hidden;
+    flex-grow: 1;
 }
 
 .loisir1>.A_Limage>img,
@@ -412,7 +413,7 @@ flex-grow: 1;
     object-fit: cover;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    margin: auto;
+    
 }
 .loisir1,
 .loisir4{
@@ -450,7 +451,7 @@ flex-grow: 1;
 .loisir6>.A_Limage>img{
     object-position: 0 0;
     overflow: hidden;
-    height: 245px;
+    
 }
 .loisir3,
 .loisir5{
@@ -597,6 +598,8 @@ Footer h3
     nav>ul{
         order: 2;
         flex-basis: 100%;
+        margin-top: 40px;
+        
     }
     nav{flex-basis: 100%;
         flex-wrap: wrap;
@@ -606,7 +609,79 @@ Footer h3
     #logo{
         display: none;
     }
+    .logoM{
+        display:block ;
+       
+    }
+    
+   nav{
+        display: flex;
+        justify-content: space-between;
 }
+
+    #loisir{
+        justify-content: center;
+        margin-bottom: 60px;
+    }
+    .loisir1,
+    .loisir2,
+    .loisir3,
+    .loisir4,
+    .loisir5,
+    .loisir6{
+        
+        min-width: 350px;
+        height: 150px;
+
+    }
+    #loisir .loisir1 img{
+        object-position: 0 -60px;
+        height: 300px;
+    }
+    #loisir .loisir2 img{
+        object-position: 0 -200px;
+        }
+
+    #loisir .loisir3 img{
+        object-position: 0 0px;
+        height: 300px;
+    }
+    #loisir .loisir4 img{
+        object-position: -50px -60px;
+        height: 290px;
+        }
+    #loisir .loisir5 img{
+        object-position:0 0;
+        
+        }
+    #loisir .loisir6 img
+   { 
+        
+        object-position: 0 -30px;
+        
+        
+    }
+
+   footer{
+       flex-direction: column;
+       
+   } 
+   
+    .Footer_Apropos h3{
+       margin:20px 0 20px 45px;
+   }
+
+    .Footer_NosHeb h3{
+    margin:20px 0 20px 45px;
+}
+
+    .Footer_Assistance h3{
+    margin:20px 0 20px 45px;
+
+}
+
+}
+
 
 
 
