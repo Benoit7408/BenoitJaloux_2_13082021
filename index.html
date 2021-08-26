@@ -20,7 +20,7 @@
                     <li><a href="#Hebergement">Hebergements</a></li>
                     <li><a href="#loisir">Activité</a></li>
                 </ul>
-                <img class="logoM" src="images/logo/Reservia.svg" alt="Logo du site"></img>
+                <img class="logoM" src="images/logo/Reservia.svg" alt="Logo du site">
                 <p> <a href="#inscrire">S'inscrire</a> </p>
                 
             </nav>
@@ -35,8 +35,8 @@
         <form method="POST" action="#"><!--Mon champs de recherche-->
             <i class="fas fa-map-marker-alt"></i>
             <input type="search" name="ville" placeholder="Marseille, France">
-            <button>Rechercher</button>
-
+            <button class="desktop">Rechercher</button>
+            <button class="mobile"><i class="fas fa-search"></i></button>
         </form>
         
         <section class="Filtre"><!--Ma section filtre-->
@@ -47,9 +47,9 @@
                 <li><i class="fas fa-heart"></i>Romantique</li>
                 <li><i class="fas fa-dog"></i>Animaux autorisé</li>
             </ul>
-
-            <p><i class="fas fa-info"></i>Plus de 500 logements sont disponible dans cette ville</p>
-
+            <div>
+            <span><i class="fas fa-info"></i></span><p>Plus de 500 logements sont disponible dans cette ville</p>
+            </div>
         </section>
     
         <main><!--Le corp principale de la page, contient les id Hebergement et loisir-->

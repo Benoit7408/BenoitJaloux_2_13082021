@@ -110,6 +110,10 @@ form  button{
     font-weight: 600;
     margin-left: -4px;
 }
+
+.mobile{
+    display: none;
+}
 /*mon champ de recherche */
 form input{
     border: 2px #f2f2f2 solid;
@@ -140,13 +144,15 @@ form > i{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin-top: 15px;
 }
 /*ma liste a puce en ligne */
 .Filtre > ul
 {
 display: flex;
 flex-wrap: wrap;
-justify-content: space-between;
+flex-basis:90%;
+
 }
 /*bordure des élement de ma liste */
 .Filtre li
@@ -175,16 +181,20 @@ justify-content: space-between;
     margin-left: -20px;
     border: 2px #DEEBFF solid;
 }
-/*petit paragraphe 100% pour un retour a la ligne */
-.Filtre>p
-{
-    width: 95%;
-}
-.Filtre >p>i{
+
+.Filtre >div>span>i{
     background-color: white;
     border:2px #f2f2f2 solid;
     padding: 5px 10px;
-    margin:10px 5px 20px 0px;
+    margin:15px 15px 15px 0;
+}
+
+.Filtre>div{
+
+    display: flex;
+    width: 95%;
+    margin-top:10px;
+    align-items: center;
 }
 
 /*Hebergement en ligne et wrap, supprime le stretch et espaceNliste et pliste */
@@ -535,6 +545,18 @@ Footer h3
 
 @media (max-width:1100px)
 {
+
+    #Hebergement  {
+        flex-direction:column-reverse;
+        
+    }
+
+    .desktop{
+        display:none;
+    }
+    .mobile{
+        display: inline;
+    }
     .P1{
         flex-basis: 45%;
     }
@@ -579,45 +601,74 @@ Footer h3
 
     nav{flex-basis:70%}
 
-    #Nliste{
+    #Nliste{flex-direction: column;
         flex-basis: 100%;
         margin-bottom: 20px;
     }
     #Pliste{
         flex-basis: 100%;
     }
-    .Filtre{flex-basis: 10%;}
-    .Filtre h2{margin: 40px auto ;}
+    .Filtre{flex-basis: 100%;}
+    .Filtre h2{margin: 10px auto ;}
     .Filtre ul li{margin: 10px;}
-    .titres{width:80%;
+    .titres{margin: 40px;
             }
-    form{width: 40%;}
-}
+    form{margin:40px;
+    }
 
 @media (max-width:770px){
+    
+    nav{flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+
     nav>ul{
         order: 2;
         flex-basis: 100%;
-        margin-top: 40px;
-        
+        margin-top: 20px;
+        justify-content: center;   
     }
-    nav{flex-basis: 100%;
-        flex-wrap: wrap;
-        
+    nav>ul>li a{
+        border-bottom:2px #f2f2f2 solid ;
+        padding: 0px 70px 10px 50px;
+       
     }
-
+    
+    nav>ul>li a:hover{
+        border-bottom: 2px  #0065fc solid;
+        border-top:0px #0065fc solid ;
+        padding-bottom: 10px;
+        padding-left: 50px;
+        color:#0065fc;
+    }
+   
     #logo{
         display: none;
     }
     .logoM{
-        display:block ;
-       
+        display:block;
+        margin-left:40px ;
+    }
+
+    nav>p>a{
+        margin-right: 40px;
     }
     
    nav{
         display: flex;
         justify-content: space-between;
-}
+    }
+
+    .Filtre h2{margin: 0px 0 40px 35px;
+    }
+    .Filtre ul{margin:-20px;
+    }
+    .Filtre p{margin-left:10px ;}
+
+    form{margin: 40px; 
+        
+    }
+    
 
     #loisir{
         justify-content: center;
@@ -630,8 +681,9 @@ Footer h3
     .loisir5,
     .loisir6{
         
-        min-width: 350px;
+        min-width: 370px;
         height: 150px;
+        margin-bottom: 60px;
 
     }
     #loisir .loisir1 img{
@@ -659,8 +711,9 @@ Footer h3
         
         object-position: 0 -30px;
         
-        
     }
+
+    .P1,.P2,.P2BIS{margin-bottom: -80px;}
 
    footer{
        flex-direction: column;
@@ -677,13 +730,6 @@ Footer h3
 
     .Footer_Assistance h3{
     margin:20px 0 20px 45px;
-
 }
 
 }
-
-
-
-
-
-
