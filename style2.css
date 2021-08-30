@@ -1,0 +1,604 @@
+/* Toute mes animations utilisé ainsi que mon chargement de police */
+@font-face {
+  font-family: "Raleway";
+  src: url(fonts/Raleway-VariableFont_wght.ttf) format("truetype"),
+      url(fonts/Raleway-Italic-VariableFont_wght.ttf) format("truetype");
+}
+
+@keyframes moove{
+  0%{
+      transform:translate(0,0);  
+  }
+  25% {
+      transform:translate(60px,-5px);
+  }
+  50%{
+      transform:translate(120px,0px);
+  }
+  75% {
+      transform:translate(60px,5px)
+  }
+  100%{
+      transform:translate(0,0);
+      color: red;
+  }
+}
+
+@keyframes couleur{
+  0%{
+      color: black;
+  }
+  100%{
+      color:white;
+      background-color:black ;
+      
+      animation-fill-mode: forwards;
+  }
+}
+/* Je supprime les marge automatique et je charge ma police */
+html,body {
+  font-family: "raleway";
+  margin:0;
+}
+/*J'utilise 95% de la page et je centre tout les éléments sauf le footer*/
+main, header,.titres,form,.filtre{
+  width: 95%;
+  margin:auto;
+}
+/* j'ecrase la couleur par defaut de mes ancres et je supprime le soulignement.
+Suppresion des puces de li */
+a{
+  color:black;
+  text-decoration: none;
+}
+li{
+  list-style-type: none;
+}
+/*Header en flex, retour a la ligne pour le responsive,supprime le strech axe secondaire et espace sur axe pricinpale,
+creation d'une marge top */
+header{
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+/*taille du logo */
+#logo{
+  width: 10%;
+  height: auto;
+}
+/*ma nav prend 40 % de mon header ou va à la ligne( flex parent)
+,les enfants vont à la ligne si besoin */
+nav{
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 40%;
+}
+/*ul en ligne et prend la place maximale accordé tout en ayant le meme espace avant apres et entre chaques enfants*/
+nav  ul{
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-evenly
+}
+/* Je crée un padding sur mes ancre de navigation, ancre_inscrire est séparé de mon ul pour faciliter le responsive
+Le padding est separé pour qu'il ne sois pas créer au passage de la souris( sinon un decalage/animation se fait)*/
+.ancreh{
+  padding: 20px;
+}
+.inscrire{
+  color:#0065fc;
+  font-weight:700;
+  padding: 20px;
+}
+.inscrire:hover,
+.ancreh:hover{
+  border-top:2px #0065fc solid;
+  color: #0065fc;
+}
+/* Mon icone de localisation */
+.fa-map-marker-alt{
+    height: 25px;
+    border: 2px #f2f2f2 solid;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #f2f2f2;
+    padding:10px 12px 1px 13px;
+    margin-left: 5px;
+}
+/* Mon champ de recherche */
+form input{
+  border: 2px #f2f2f2 solid;
+  border-right: none;
+  padding: 10px ;
+  margin:0 0 0 -4px;
+}
+/* Mon bouton de recherche en desktop */
+button.desktop{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left: none;
+    border-color: #0065fc;
+    background-color: #0065fc;
+    padding:10px 10px;
+    color: white;
+    font-weight: 600;
+    margin-left: -4px;
+}
+/* Ma police dans le champ de recherche */
+::placeholder{
+  font-family: "Raleway";
+  color: BLACK;
+  font-weight: 900;
+}
+/*ma classe filtre et la suppression du strech axe secondaire */
+.filtre
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 15px;
+}
+/*ma liste a puce en ligne */
+.filtre > ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis:90%;
+}
+/*bordure des élement de ma liste */
+.filtre li{
+    font-weight: 500;
+    border: 2px #f2f2f2 solid;
+    padding: 0px 20px;
+    border-radius: 25px;
+    margin-left: 25px;
+}
+/* Mes animation(key frame en haut de page) */
+.filtre li:hover{
+  animation: couleur 0.5s;
+  animation-fill-mode: forwards;
+}
+.filtre i:active{
+  animation: moove 3s;
+}
+/*les icones enfant direct de filtre et leur placements*/
+.filtre i{
+  padding: 10px;
+  color: #0065FC;
+  background-color: #DEEBFF;
+  border-radius: 25px;
+  margin-right: 15px;
+  margin-left: -22px;
+  border: 1px #DEEBFF solid;
+}
+/* Mon icone information */
+.fas.fa-info{
+    background-color: white;
+    border:2px #f2f2f2 solid;
+    padding: 5px 10px;
+    margin:15px 15px 15px 0;
+}
+/*Pour placer coorectement mon icone info  */
+.filtre>div{
+  display: flex;
+  width: 95%;
+  margin-top:10px;
+  align-items: center;
+}
+/*Hebergement en ligne et wrap, supprime le stretch et espaceNliste et pliste */
+#hebergement{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+}
+/* La couleur de mes icones dans i */
+#hebergement i{
+    color: #0065fc;
+}
+#hebergement figcaption{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/*taille de Nliste, arrondi de bordure... */
+#nliste {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-basis: 69%;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    align-items: flex-start;
+}
+/*Me permet de placer mon titre au dessus des autres éléments  */
+#nliste_titre {
+    flex: 0 100%;
+    margin: 10px 0 0 10px;
+}
+/*taille de base , utilise espace max, bordure ... */
+.loc 
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 30%;
+    border: 1px white solid;
+    margin: 10px 10px;
+    border-radius: 15px;
+    background-color: white;
+     
+}
+.loc>figure{
+  
+  flex-grow: 1;
+  margin: 0;
+}
+.ancre-image{
+  flex-basis: 100%;
+}
+#nliste img
+{
+    display: flex;
+    width: 100%;
+    height: 170PX;
+    object-fit: cover;
+    border-top-left-radius:15px ;
+    border-top-right-radius: 15px;
+}
+/* utilise l'espace disponible */
+#nliste figcaption
+{
+    margin-top: 10px;
+}
+/* Créer une marge dans tout les elements enfant de figcaption */
+.ancre_figcaption *,
+#nliste>.figcaption>p{
+  margin: 5px 0 0 10PX ;
+}
+/* creer une marge en dessous de afficher plus */
+#moreh{
+   flex: 0 100%;
+   margin-left: 10px;
+}
+/* pliste, enfant d'hebergement */
+#pliste
+{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    
+}
+#pliste_titre
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+.fas .fa-chart-line{
+  color: black;
+}
+/* toutle les figure de pliste */
+.poploc{
+    display: flex;
+    border:1px white solid;
+    border-radius: 15px;
+    background-color: white;
+    margin:20px 20px 30px 20px;
+    
+}
+.poploc>figure{
+    display:flex;
+    margin: 1px;
+    flex-grow: 1;
+}
+/* Les ancres des figures utilisent l'espace disponible */
+.ancre_popimage{
+  flex:1 40%;
+  height: 180PX;
+}
+/*  */
+.ancre_popfigcaption *,
+#pliste>.figcaption>p{
+  margin-left: 10px;
+}
+/*  */
+#pliste figcaption{
+  flex-basis:60%;
+}
+#pliste img{
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  overflow: hidden;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+/* Mon id loisir enfant de main */
+#loisir {
+    display: flex;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    justify-content: space-between;
+}
+/* Mon titre de la section loisir */
+#l_titre{
+    flex-basis: 100%;
+    margin:10px;
+}
+#l_titre>h2{
+  margin:30px 0 10px 0;
+}
+/*  */
+.partie{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 23%;
+    margin: 0px;
+    border-radius: 15px;
+    padding: 0 0 100px 0;
+}
+
+.partie figure{
+    display:flex;
+    flex-wrap: wrap;
+    margin:0;
+    width: 100%;
+}
+/* Regle comune de toute mes ancres qui contiennent mes images */
+.ancre_loisir{
+    display: flex;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.anlo1,
+.anlo4{
+  height: 600px
+}
+
+.ancre_loisir img{
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.anlo1 img{
+    height: 650px;
+    object-position: -280px 0;
+    }
+.anlo4 img{
+    height: 650px;
+    object-position: -280px 0;
+}
+
+.anlo2{
+  height: 300px;
+}
+
+.anlo2 img{
+  height: 300px;
+  object-position: 0 -120px;
+}
+
+.anlo6{
+  height:235px
+}
+.anlo6 img{
+  height: 275px;
+  object-position: 0 0PX;
+}
+.anlo3{
+  height:185px}
+.anlo3 img{
+  height: 190px;
+  object-position: 0 0;
+}
+.anlo5{
+  height: 250px;
+}
+.anlo5 img{
+  height: 350px;
+  object-position:-40px 0px;
+}
+
+.loisir2{margin: 0 0 30px 0;}
+.loisir3{margin: 30px 0 0 0;}
+.loisir5{margin: 0 0 30px 0;}
+.loisir6{margin: 30px 0 0 0;}
+
+#loisir figcaption{
+  background-color: white;
+  width: 100%;
+  margin: auto;
+  border: 1px #f2f2f2 solid;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.star{
+  margin-left:10px;
+}
+#loisir h3{
+  margin: 0 0 0 10px;
+  padding: 15px 0px 15px 10px;
+}
+/* la selection de mes icones etoile */
+#nliste > article:nth-of-type(2n+1) > figure > figcaption > p > i:last-child{
+    color:#DEEBFF;
+}
+
+#nliste > article.loc:nth-of-type(4) > figure > figcaption > p > i:nth-of-type(1n+4){
+    color:#DEEBFF;
+}
+
+#pliste > article:nth-of-type(1n+2) > figure > figcaption > p > i:last-child{
+    color:#DEEBFF;
+}
+
+footer{  
+    margin: 0;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* attribut la place dispo a toutes mes classes qui ont footer dans le nom */
+[class*="Footer"]{
+    flex-grow: 1;
+}
+footer > [class*="Footer"] > ul > li{
+    list-style-type: none;
+    padding: 5px;
+}
+footer h3{
+    margin-left: 40px;
+}
+@media (max-width:1400px){
+
+  
+  html,
+  body,
+  main {
+    width:100%;
+    margin:0px;
+  }
+
+    nav{
+        flex-basis:70%
+    }
+
+    .loc{
+        flex-direction: column;
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+    #pliste{  
+      margin-bottom: 50px;
+    }
+    .filtre{
+      flex-basis: 100%;
+    }
+    .titres{
+      margin: 40px;
+            }
+    form{
+      margin:40px;
+    }
+    #hebergement  {
+        flex-direction:column-reverse;
+    }
+    .poploc{
+      width: 90%;
+      margin: 10px auto;
+    }
+    .loc{ 
+        flex-basis:90%;
+        margin:10px
+      }
+    #nliste img{
+      height: auto;
+      max-height: 200px;
+    }
+    .desktop{
+        display:none;
+    }
+    .mobile{
+        display: inline;
+    }
+    .partie{
+        flex-basis: 45%;
+        margin: 20px;
+    }
+
+    
+    
+}
+
+@media (max-width:770px){
+
+            html,
+            body,
+            main,
+            .titres,
+            .filtre,
+            form {
+              width: 100%;
+              margin:0;
+            }
+    
+            nav{
+                flex-basis: 100%;
+                flex-wrap: wrap;
+            }
+            nav>ul{
+                order: 2;
+                flex-basis: 100%;
+                margin-top: 10px;
+                justify-content: center;   
+            }
+            .filtre,
+            form,
+            .titres{
+              margin:10px
+            }
+
+            .filtre ul{padding: 0;}
+            .filtre ul li {margin:0px;}
+            .ancreh{
+                border-bottom:2px #f2f2f2 solid ;
+                 
+            }
+            .ancreh:hover{
+                border-bottom: 2px  #0065fc solid;
+                border-top:0px #0065fc solid ;
+                padding-bottom: 10px;
+                padding-left: 50px;
+                color:#0065fc;
+            }
+            nav{
+                display: flex;
+                justify-content: space-between;
+            }
+
+            #nliste{
+              background-color:white;
+            }
+            #nliste figure{
+              border:2px white solid;
+              border-radius: 15px;
+              box-shadow: 5px 10px 5px #f2f2f2 ;
+            }
+            #loisir{
+                justify-content: center;
+                margin-bottom: 60px;
+            }
+            .partie{
+              flex-basis: 90%;
+              flex-grow: 1;
+              justify-content: space-around;
+              padding: 0;
+            }
+         
+            .ancre_loisir{
+              height: auto;
+              width: 90%;
+            }
+        
+            #loisir img{
+              max-height: 200px;
+              object-position: 0 0;
+            }
+          footer{
+              flex-direction: column;
+          } 
+            .Footer_Apropos h3{
+              margin:20px 0 20px 45px;
+            }
+            .Footer_NosHeb h3{
+            margin:20px 0 20px 45px;
+          }
+            .Footer_Assistance h3{
+            margin:20px 0 20px 45px;
+          }
+}
