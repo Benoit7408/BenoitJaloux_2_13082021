@@ -328,14 +328,14 @@ button.desktop{
     margin:10px;
 }
 #l_titre>h2{
-  margin:30px 0 0 0;
+  margin:30px 0 10px 0;
 }
 /*  */
 .partie{
     display: flex;
     flex-direction: column;
     flex-basis: 23%;
-    margin: 10px;
+    margin: 0px;
     border-radius: 15px;
     padding: 0 0 100px 0;
 }
@@ -343,7 +343,6 @@ button.desktop{
 .partie figure{
     display:flex;
     flex-wrap: wrap;
-    flex-direction: column;
     margin:0;
     width: 100%;
 }
@@ -354,37 +353,59 @@ button.desktop{
     flex-grow: 1;
 }
 
+.anlo1,
+.anlo4{
+  height: 600px
+}
+
 .ancre_loisir img{
   width: 100%;
   object-fit: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-.anlo1 img,
+.anlo1 img{
+    height: 650px;
+    object-position: -280px 0;
+    }
 .anlo4 img{
-    height: 500px;
-    object-position: -200px 0;
+    height: 650px;
+    object-position: -280px 0;
 }
 
+.anlo2{
+  height: 300px;
+}
 
 .anlo2 img{
-  height: 220px;
-  object-position: 0 -100px;
+  height: 300px;
+  object-position: 0 -120px;
+}
+
+.anlo6{
+  height:235px
 }
 .anlo6 img{
-  height: 220px;
+  height: 275px;
+  object-position: 0 0PX;
+}
+.anlo3{
+  height:185px}
+.anlo3 img{
+  height: 190px;
   object-position: 0 0;
 }
-
-.anlo3 img,
+.anlo5{
+  height: 250px;
+}
 .anlo5 img{
-  height: 189px;
-  object-position:0 -5px;
+  height: 350px;
+  object-position:-40px 0px;
 }
 
-.loisir2{margin: 0 0 20px 0;}
+.loisir2{margin: 0 0 30px 0;}
 .loisir3{margin: 30px 0 0 0;}
-.loisir5{margin: 0 0 20px 0;}
+.loisir5{margin: 0 0 30px 0;}
 .loisir6{margin: 30px 0 0 0;}
 
 #loisir figcaption{
@@ -400,17 +421,19 @@ button.desktop{
   margin-left:10px;
 }
 #loisir h3{
-  margin: 0;
-  padding: 10px;
+  margin: 0 0 0 10px;
+  padding: 15px 0px 15px 10px;
 }
 /* la selection de mes icones etoile */
-#nliste > article > figure:nth-of-type(2n+1) > figcaption > p > i:last-child{
+#nliste > article:nth-of-type(2n+1) > figure > figcaption > p > i:last-child{
     color:#DEEBFF;
 }
-#nliste > article > figure:nth-of-type(4) > figcaption > p > i:nth-of-type(1n+4){
+
+#nliste > article.loc:nth-of-type(4) > figure > figcaption > p > i:nth-of-type(1n+4){
     color:#DEEBFF;
 }
-#pliste > article > figure:nth-of-type(1n+2) > figcaption > p > i:last-child{
+
+#pliste > article:nth-of-type(1n+2) > figure > figcaption > p > i:last-child{
     color:#DEEBFF;
 }
 
@@ -431,28 +454,30 @@ footer > [class*="Footer"] > ul > li{
 footer h3{
     margin-left: 40px;
 }
-@media (max-width:1100px){
+@media (max-width:1400px){
+
+  
+  html,
+  body,
+  main {
+    width:100%;
+    margin:0px;
+  }
 
     nav{
         flex-basis:70%
     }
 
-    #nliste{
+    .loc{
         flex-direction: column;
         flex-basis: 100%;
         margin-bottom: 20px;
     }
-    #pliste{
-        flex-basis: 100%;
+    #pliste{  
+      margin-bottom: 50px;
     }
     .filtre{
       flex-basis: 100%;
-    }
-    .filtre h2{
-      margin: 10px auto ;
-    }
-    .filtre ul li{
-      margin: 10px;
     }
     .titres{
       margin: 40px;
@@ -463,6 +488,18 @@ footer h3{
     #hebergement  {
         flex-direction:column-reverse;
     }
+    .poploc{
+      width: 90%;
+      margin: 10px auto;
+    }
+    .loc{ 
+        flex-basis:90%;
+        margin:10px
+      }
+    #nliste img{
+      height: auto;
+      max-height: 200px;
+    }
     .desktop{
         display:none;
     }
@@ -471,11 +508,24 @@ footer h3{
     }
     .partie{
         flex-basis: 45%;
+        margin: 20px;
     }
+
+    
     
 }
 
 @media (max-width:770px){
+
+            html,
+            body,
+            main,
+            .titres,
+            .filtre,
+            form {
+              width: 100%;
+              margin:0;
+            }
     
             nav{
                 flex-basis: 100%;
@@ -484,12 +534,20 @@ footer h3{
             nav>ul{
                 order: 2;
                 flex-basis: 100%;
-                margin-top: 20px;
+                margin-top: 10px;
                 justify-content: center;   
             }
+            .filtre,
+            form,
+            .titres{
+              margin:10px
+            }
+
+            .filtre ul{padding: 0;}
+            .filtre ul li {margin:0px;}
             .ancreh{
                 border-bottom:2px #f2f2f2 solid ;
-                padding: 0px 70px 10px 50px;  
+                 
             }
             .ancreh:hover{
                 border-bottom: 2px  #0065fc solid;
@@ -502,21 +560,34 @@ footer h3{
                 display: flex;
                 justify-content: space-between;
             }
+
+            #nliste{
+              background-color:white;
+            }
+            #nliste figure{
+              border:2px white solid;
+              border-radius: 15px;
+              box-shadow: 5px 10px 5px #f2f2f2 ;
+            }
             #loisir{
                 justify-content: center;
                 margin-bottom: 60px;
             }
-            .Partie{
-              margin-bottom: -80px;
+            .partie{
+              flex-basis: 90%;
+              flex-grow: 1;
+              justify-content: space-around;
+              padding: 0;
             }
-           .partie figure{ 
-                min-width: 370px;
-                height: 150px;
-                margin-bottom: 60px;
+         
+            .ancre_loisir{
+              height: auto;
+              width: 90%;
             }
-            #loisir .loisir1 img{
-                object-position: 0 -60px;
-                height: 300px;
+        
+            #loisir img{
+              max-height: 200px;
+              object-position: 0 0;
             }
           footer{
               flex-direction: column;
