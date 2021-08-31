@@ -21,7 +21,7 @@
                 <li><a class="ancreh" href="#loisir">Activité</a></li>
             </ul>
             <p> 
-                    <a class="inscrire" href="#inscrire">S'inscrire</a>
+                    <a class="inscrire" href="#">S'inscrire</a>
             </p>    
         </nav>
     </header>
@@ -34,9 +34,9 @@
 
     <form method="POST" action="#"><!--Mon champs de recherche-->
         <i class="fas fa-map-marker-alt"></i>
-        <input type="search" name="ville" placeholder="Marseille, France">
-        <button class="desktop">Rechercher</button>
-        <button class="mobile"><i class="fas fa-search"></i></button>
+        <input type="search" name="ville" placeholder="Marseille, France" required>
+        <button class="desktop" type="submit">Rechercher</button>
+        <button class="mobile" type="submit"><i class="fas fa-search"></i></button>
     </form>
         
     <section class="filtre"><!--Ma section filtre-->
@@ -48,7 +48,8 @@
             <li><i class="fas fa-dog"></i>Animaux autorisé</li>
         </ul>
         <div>
-            <span><i class="fas fa-info"></i></span><p>Plus de 500 logements sont disponible dans cette ville</p>
+            <span><i class="fas fa-info"></i></span>
+            <p>Plus de 500 logements sont disponible dans cette ville</p>
         </div>
     </section>
     
