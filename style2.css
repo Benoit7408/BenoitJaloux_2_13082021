@@ -274,7 +274,7 @@ button.desktop{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 10px;
+    margin: 5px 10px 0 10px;
 }
 .fas .fa-chart-line{
   color: black;
@@ -335,7 +335,7 @@ button.desktop{
     display: flex;
     flex-direction: column;
     flex-basis: 23%;
-    margin: 0px;
+    margin: 10px;
     border-radius: 15px;
     padding: 0 0 100px 0;
 }
@@ -454,13 +454,31 @@ footer > [class*="Footer"] > ul > li{
 footer h3{
     margin-left: 40px;
 }
+
+
+.mobile{
+  display: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-left: none;
+  border-left-color: currentcolor;
+  border-color: #0065fc;
+  background-color: #0065fc;
+  padding: 10px 10px;
+  color: white;
+  font-weight: 600;
+  margin-left: -4px;
+}
+
+.fa-chart-line::before{color: black;}
+
+
 @media (max-width:1400px){
 
   
-  html,
-  body,
+  
   main {
-    width:100%;
+    width: 100%;
     margin:0px;
   }
 
@@ -476,6 +494,15 @@ footer h3{
     #pliste{  
       margin-bottom: 50px;
     }
+
+    #loisir{justify-content: space-around;}
+    #loisir figure{
+      max-width: 500px;
+      min-width: 400px;
+    }
+
+    #loisir img{height: auto;
+    object-position:  0 0;}
     .filtre{
       flex-basis: 100%;
     }
@@ -489,12 +516,12 @@ footer h3{
         flex-direction:column-reverse;
     }
     .poploc{
-      width: 90%;
-      margin: 10px auto;
+      width: 70%;
+      margin: 20px auto;
     }
     .loc{ 
-        flex-basis:90%;
-        margin:10px
+        flex-basis:40%;
+        margin:20px
       }
     #nliste img{
       height: auto;
@@ -508,34 +535,54 @@ footer h3{
     }
     .partie{
         flex-basis: 45%;
-        margin: 20px;
-    }
+        margin: 10px;
+    }   
 
-    
-    
+    .partie article{margin:0px auto 60px }
+    #nliste_titre,
+    #moreh,
+    #l_titre{flex-basis: 90%;}
 }
 
-@media (max-width:770px){
+@media (max-width:950px){
 
-            html,
-            body,
-            main,
+            #logo{
+              position: absolute;
+              margin-bottom: 100px;
+              width: 25%;
+              height: auto;
+            }
+            .desktop{display: none;}
+            .mobile{display: inline;}
+         
+            
             .titres,
             .filtre,
             form {
-              width: 100%;
+              
               margin:0;
             }
-    
+            .poploc{width: 90%;}
+            .loc{flex-basis: 90%;}
             nav{
                 flex-basis: 100%;
                 flex-wrap: wrap;
+                flex-direction: row-reverse;
             }
             nav>ul{
                 order: 2;
                 flex-basis: 100%;
                 margin-top: 10px;
                 justify-content: center;   
+            }
+            nav li{
+              flex-basis: 100%;
+              display: flex;
+
+            }
+
+            .inscrire{
+              align-items: flex-end;
             }
             .filtre,
             form,
@@ -544,16 +591,18 @@ footer h3{
             }
 
             .filtre ul{padding: 0;}
-            .filtre ul li {margin:0px;}
+            .filtre ul li {margin:10px;}
+
+            nav ul{padding:0}
             .ancreh{
-                border-bottom:2px #f2f2f2 solid ;
-                 
+                  flex-basis: 100%;
+                  border-bottom:5px #f2f2f2 solid ;
+                  text-align: center;
+
             }
             .ancreh:hover{
-                border-bottom: 2px  #0065fc solid;
+                border-bottom: 5px  #0065fc solid;
                 border-top:0px #0065fc solid ;
-                padding-bottom: 10px;
-                padding-left: 50px;
                 color:#0065fc;
             }
             nav{
@@ -564,30 +613,45 @@ footer h3{
             #nliste{
               background-color:white;
             }
+            
             #nliste figure{
               border:2px white solid;
               border-radius: 15px;
               box-shadow: 5px 10px 5px #f2f2f2 ;
             }
             #loisir{
-                justify-content: center;
-                margin-bottom: 60px;
+                
+                margin-bottom: auto ;
+                
             }
             .partie{
               flex-basis: 90%;
               flex-grow: 1;
               justify-content: space-around;
               padding: 0;
+              margin:auto;
             }
          
             .ancre_loisir{
               height: auto;
               width: 90%;
             }
-        
+
+            #loisir figure{
+              margin:10px;
+              flex-basis: 90%;
+              max-width: none;
+              min-width: 0;
+            }
+            #loisir article{
+              display: flex;
+              justify-content: space-around;
+              margin: 0;
+            }
             #loisir img{
-              max-height: 200px;
+              height: 300px;
               object-position: 0 0;
+             
             }
           footer{
               flex-direction: column;
