@@ -38,7 +38,7 @@ html,body {
   margin:0;
 }
 /*J'utilise 95% de la page et je centre tout les éléments sauf le footer*/
-main, header,.titres,form,.filtre{
+main, header,#titres,form,#filtre{
   width: 95%;
   margin:auto;
 }
@@ -84,12 +84,12 @@ Le padding est separé pour qu'il ne sois pas créer au passage de la souris( si
 .ancreh{
   padding: 20px;
 }
-.inscrire{
+#inscrire{
   color:#0065fc;
   font-weight:700;
   padding: 20px;
 }
-.inscrire:hover,
+#inscrire:hover,
 .ancreh:hover{
   border-top:2px #0065fc solid;
   color: #0065fc;
@@ -123,6 +123,8 @@ button.desktop{
     font-weight: 600;
     margin-left: -4px;
 }
+
+
 /* Ma police dans le champ de recherche */
 ::placeholder{
   font-family: "Raleway";
@@ -130,7 +132,7 @@ button.desktop{
   font-weight: 900;
 }
 /*ma classe filtre et la suppression du strech axe secondaire */
-.filtre
+#filtre
 {
     display: flex;
     flex-wrap: wrap;
@@ -138,13 +140,13 @@ button.desktop{
     margin-top: 15px;
 }
 /*ma liste a puce en ligne */
-.filtre > ul{
+#filtre > ul{
     display: flex;
     flex-wrap: wrap;
     flex-basis:90%;
 }
 /*bordure des élement de ma liste */
-.filtre li{
+#filtre li{
     font-weight: 500;
     border: 2px #f2f2f2 solid;
     padding: 0px 20px;
@@ -152,16 +154,16 @@ button.desktop{
     margin:10px 25px;
 }
 /* Mes animation(key frame en haut de page) */
-.filtre li:hover{
+#filtre li:hover{
   animation: couleur 0.5s;
   animation-fill-mode: forwards;
 }
-.filtre ul i:hover{
+#filtre ul i:hover{
   animation: moove 1s;
   animation-fill-mode: forwards;
 }
 /*les icones enfant direct de filtre et leur placements*/
-.filtre i{
+#filtre i{
   padding: 10px;
   color: #0065FC;
   background-color: #DEEBFF;
@@ -172,13 +174,13 @@ button.desktop{
 }
 /* Mon icone information */
 .fas.fa-info{
-    background-color: white;
-    border:2px #f2f2f2 solid;
-    padding: 5px 10px;
-    margin:15px 15px 15px 0;
+    background-color: white!important;
+    border:2px #f2f2f2 solid!important;
+    padding: 5px 10px!important;
+    margin:15px 15px 15px 0!important;
 }
 /*Pour placer coorectement mon icone info  */
-.filtre>div{
+#filtre>div{
   display: flex;
   width: 95%;
   margin-top:10px;
@@ -273,7 +275,7 @@ button.desktop{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 10px 10px 0 10px;
+    margin: 10px 10px 10px 10px;
 }
 .fas .fa-chart-line{
   color: black;
@@ -284,7 +286,7 @@ button.desktop{
     border:1px white solid;
     border-radius: 15px;
     background-color: white;
-    margin:10px 20px 30px 20px;
+    margin:20px
     
 }
 .poploc>figure{
@@ -295,20 +297,20 @@ button.desktop{
 /* Les ancres des figures utilisent l'espace disponible */
 .ancre_popimage{
   flex:1 40%;
-  height: 180PX;
+  height: 200PX;
 }
-/*  */
-.ancre_popfigcaption *,
-#pliste>.figcaption>p{
+/* Tout mes élément dans le figcaption hebergement populaire */
+.ancre_popfigcaption *
+{
   margin-left: 10px;
 }
 /*  */
 #pliste figcaption{
-  flex-basis:60%;
+  flex:1 60%;
 }
 #pliste img{
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
   overflow: hidden;
   border-top-left-radius: 15px;
@@ -324,12 +326,10 @@ button.desktop{
 /* Mon titre de la section loisir */
 #l_titre{
     flex-basis: 100%;
-    margin:10px;
+    margin:40px 10px 10px 10px;
 }
-#l_titre>h2{
-  margin:30px 0 10px 0;
-}
-/*  */
+
+/* 4 grand élement, eux meme divise par la suite  */
 .partie{
     display: flex;
     flex-direction: column;
@@ -338,23 +338,19 @@ button.desktop{
     border-radius: 15px;
     padding: 0 0 100px 0;
 }
-
+/* Display flex pour ensuite un flex grow sur enfant */
 .partie figure{
     display:flex;
     flex-wrap: wrap;
     margin:0;
     width: 100%;
 }
-/* Regle comune de toute mes ancres qui contiennent mes images */
+/* Regle comune de toute mes ancres qui contiennent mes images
+display flex utile pour mon responsive */
 .ancre_loisir{
     display: flex;
     overflow: hidden;
     flex-grow: 1;
-}
-
-.anlo1,
-.anlo4{
-  height: 600px
 }
 
 .ancre_loisir img{
@@ -363,6 +359,11 @@ button.desktop{
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
+
+.anlo1,
+.anlo4{
+  height: 600px
+}
 .anlo1 img{
     height: 650px;
     object-position: -280px 0;
@@ -370,6 +371,12 @@ button.desktop{
 .anlo4 img{
     height: 650px;
     object-position: -280px 0;
+}
+.anlo3{
+  height:185px}
+.anlo3 img{
+  height: 190px;
+  object-position: 0 0;
 }
 
 .anlo2{
@@ -380,20 +387,6 @@ button.desktop{
   height: 300px;
   object-position: 0 -120px;
 }
-
-.anlo6{
-  height:235px
-}
-.anlo6 img{
-  height: 275px;
-  object-position: 0 0PX;
-}
-.anlo3{
-  height:185px}
-.anlo3 img{
-  height: 190px;
-  object-position: 0 0;
-}
 .anlo5{
   height: 250px;
 }
@@ -401,6 +394,15 @@ button.desktop{
   height: 350px;
   object-position:-40px 0px;
 }
+.anlo6{
+  height:235px
+}
+.anlo6 img{
+  height: 275px;
+  object-position: 0 0PX;
+}
+
+
 
 .loisir2{margin: 0 0 30px 0;}
 .loisir3{margin: 30px 0 0 0;}
@@ -417,42 +419,50 @@ button.desktop{
 }
 
 .star{
-  margin-left:10px;
+  margin:15px 0px 10px 10px;
 }
 #loisir h3{
   margin: 0 0 0 10px;
   padding: 15px 0px 15px 10px;
 }
 /* la selection de mes icones etoile */
-#nliste > article:nth-of-type(2n+1) > figure > figcaption > p > i:last-child{
+#nliste > article:nth-of-type(2n+1) > figure > figcaption > p > a > i:last-child{
     color:#DEEBFF;
 }
 
-#nliste > article.loc:nth-of-type(4) > figure > figcaption > p > i:nth-of-type(1n+4){
+#nliste > article.loc:nth-of-type(4) > figure > figcaption > p > a > i:nth-of-type(1n+4){
     color:#DEEBFF;
 }
 
-#pliste > article:nth-of-type(1n+2) > figure > figcaption > p > i:last-child{
+#pliste > article:nth-of-type(1n+2) > figure > figcaption > p > a > i:last-child{
     color:#DEEBFF;
 }
 
 footer{  
-    margin: 0;
+    margin-left: 0;
     background-color: #f2f2f2;
     display: flex;
     flex-wrap: wrap;
 }
 /* attribut la place dispo a toutes mes classes qui ont footer dans le nom */
-[class*="Footer"]{
+#Apropos,
+#NosHeb,
+#Assistance{
     flex-grow: 1;
+    flex-basis: 20%;
 }
-footer > [class*="Footer"] > ul > li{
+footer li{
     list-style-type: none;
     padding: 5px;
 }
 footer h3{
-    margin-left: 40px;
+    margin-left: 0px;
 }
+footer  ul
+{padding-left: 0;}
+
+#Apropos{margin-left: 60px;}
+#NosHeb{margin-left:20px;}
 
 
 .mobile{
@@ -506,7 +516,7 @@ footer h3{
     .anlo4 img,
     .anlo1 img {object-position: -280px 0 ;}
 
-    .filtre{
+    #filtre{
       flex-basis: 100%;
     }
     .titres{
@@ -560,8 +570,8 @@ footer h3{
             .mobile{display: inline;}
          
             
-            .titres,
-            .filtre,
+            #titres,
+            #filtre,
             form {
               
               margin:0;
@@ -585,17 +595,17 @@ footer h3{
 
             }
 
-            .inscrire{
+            #inscrire{
               align-items: flex-end;
             }
-            .filtre,
+            #filtre,
             form,
-            .titres{
+            #titres{
               margin:10px
             }
 
-            .filtre ul{padding: 0;}
-            .filtre ul li {margin:10px;}
+            #filtre ul{padding: 0;}
+            #filtre ul li {margin:10px;}
 
             nav ul{padding:0}
             .ancreh{
@@ -663,21 +673,23 @@ footer h3{
               
              
             }
-          footer{
-              flex-direction: column;
-          } 
-            .Footer_Apropos h3{
-              margin:20px 0 20px 45px;
-            }
-            .Footer_NosHeb h3{
-            margin:20px 0 20px 45px;
-          }
-            .Footer_Assistance h3{
-            margin:20px 0 20px 45px;
-          }
+         
+          [class*="Footer"] h3{
+            margin:20px 0 20px 0px;
+        }
+        #Apropos,
+        #NosHeb,
+        #Assistance{margin-left: 60px;}
 }
 
 @media (max-width:600px){
+  footer{
+    flex-direction: column;
+} 
+        #Apropos,
+        #NosHeb,
+        #Assistance{margin-left: 40px;}
+  
   .partie{
     flex-basis: 90%;
   }
@@ -694,6 +706,6 @@ footer h3{
   #nliste img,
   #pliste img,
   #loisir img{
-    height: 180px;
+    height: 200px;
   }
 }
