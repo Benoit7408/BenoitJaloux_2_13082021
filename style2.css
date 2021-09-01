@@ -251,8 +251,7 @@ button.desktop{
     margin-top: 10px;
 }
 /* Créer une marge dans tout les elements enfant de figcaption */
-.ancre_figcaption *,
-#nliste>.figcaption>p{
+.ancre_figcaption *{
   margin: 5px 0 0 10PX ;
 }
 /* creer une marge en dessous de afficher plus */
@@ -277,9 +276,8 @@ button.desktop{
     justify-content: space-between;
     margin: 10px 10px 10px 10px;
 }
-.fas .fa-chart-line{
-  color: black;
-}
+
+.fa-chart-line::before{color: black;}
 /* toutle les figure de pliste */
 .poploc{
     display: flex;
@@ -316,6 +314,24 @@ button.desktop{
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
 }
+
+.star{
+  margin:15px 0px 10px 10px;
+}
+
+/* la selection de mes icones etoile */
+#nliste > article:nth-of-type(2n+1) > figure > figcaption > p > a > i:last-child{
+  color:#DEEBFF;
+}
+
+#nliste > article.loc:nth-of-type(4) > figure > figcaption > p > a > i:nth-of-type(1n+4){
+  color:#DEEBFF;
+}
+
+#pliste > article:nth-of-type(1n+2) > figure > figcaption > p > a > i:last-child{
+  color:#DEEBFF;
+}
+
 /* Mon id loisir enfant de main */
 #loisir {
     display: flex;
@@ -352,26 +368,32 @@ display flex utile pour mon responsive */
     overflow: hidden;
     flex-grow: 1;
 }
-
+/* Récgle  génèrale de mes ancres images */
 .ancre_loisir img{
   width: 100%;
   object-fit: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-
+/* Travail sur la hauteur de mes images par rapport au ancre pour
+ensuite le positionnement par rapport à la maquette */
 .anlo1,
 .anlo4{
   height: 600px
 }
-.anlo1 img{
-    height: 650px;
-    object-position: -280px 0;
-    }
+.anlo1 img,
 .anlo4 img{
     height: 650px;
     object-position: -280px 0;
+    }
+.anlo2{
+    height: 300px;
 }
+.anlo2 img{
+  height: 300px;
+  object-position: 0 -120px;
+}
+
 .anlo3{
   height:185px}
 .anlo3 img{
@@ -379,14 +401,6 @@ display flex utile pour mon responsive */
   object-position: 0 0;
 }
 
-.anlo2{
-  height: 300px;
-}
-
-.anlo2 img{
-  height: 300px;
-  object-position: 0 -120px;
-}
 .anlo5{
   height: 250px;
 }
@@ -402,12 +416,14 @@ display flex utile pour mon responsive */
   object-position: 0 0PX;
 }
 
-
+/* Tableau de mes marge pour p2 */
 
 .loisir2{margin: 0 0 30px 0;}
 .loisir3{margin: 30px 0 0 0;}
 .loisir5{margin: 0 0 30px 0;}
 .loisir6{margin: 30px 0 0 0;}
+
+/* Regle générale de figcaption */
 
 #loisir figcaption{
   background-color: white;
@@ -418,144 +434,141 @@ display flex utile pour mon responsive */
   border-bottom-right-radius: 15px;
 }
 
-.star{
-  margin:15px 0px 10px 10px;
-}
-#loisir h3{
-  margin: 0 0 0 10px;
-  padding: 15px 0px 15px 10px;
-}
-/* la selection de mes icones etoile */
-#nliste > article:nth-of-type(2n+1) > figure > figcaption > p > a > i:last-child{
-    color:#DEEBFF;
+/* h3 de figcaption loisir */
+.ancre_loisir_figcaption h3{
+  
+  padding: 15px;
+  margin: 0;
 }
 
-#nliste > article.loc:nth-of-type(4) > figure > figcaption > p > a > i:nth-of-type(1n+4){
-    color:#DEEBFF;
-}
-
-#pliste > article:nth-of-type(1n+2) > figure > figcaption > p > a > i:last-child{
-    color:#DEEBFF;
-}
-
+/* Régle génèrale de mon footer */
 footer{  
     margin-left: 0;
     background-color: #f2f2f2;
     display: flex;
     flex-wrap: wrap;
 }
-/* attribut la place dispo a toutes mes classes qui ont footer dans le nom */
+/* attribut la place dispo a toutes mes id */
 #Apropos,
 #NosHeb,
 #Assistance{
     flex-grow: 1;
     flex-basis: 20%;
 }
-footer li{
-    list-style-type: none;
-    padding: 5px;
-}
+
 footer h3{
     margin-left: 0px;
 }
-footer  ul
-{padding-left: 0;}
-
-#Apropos{margin-left: 60px;}
-#NosHeb{margin-left:20px;}
-
-
+footer  ul{
+  padding-left: 0px;
+}
+/* padding utile pour le tactile des smartphones */
+footer li{
+  padding: 5px 0px;
+}
+/* Pour coller un peu plus à la maquette */
+#Apropos{
+  margin-left: 60px;
+}
+/* Fait disparaitre l'icone rechercher.
+Apparait uniquement dans le responsive smartphone */
 .mobile{
   display: none;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-left: none;
-  border-left-color: currentcolor;
-  border-color: #0065fc;
-  background-color: #0065fc;
-  padding: 10px 10px;
-  color: white;
-  font-weight: 600;
-  margin-left: -4px;
 }
 
-.fa-chart-line::before{color: black;}
-
-
+/* Je décale mon css pour ce media pour une meilleur visibilité */
 @media (max-width:1400px){
 
-  
-  
-  main {
-    width: 100%;
-    margin:0px;
-  }
-
+    /* utilise à nouveau 100% de la largeur de page pour main */
+    main {
+      width: 100%;
+      margin:0px;
+    }
+    /* pour le responsive,évite un collment des élément trop rapide */
     nav{
         flex-basis:70%
     }
-
-    .loc{
-        flex-direction: column;
-        flex-basis: 100%;
-        margin-bottom: 20px;
+    /* Change mon espace utile pour mes enfants pour avoir une autre disposition */
+    .loc{ 
+      flex-basis:40%;
+      margin:20px
     }
     #pliste{  
       margin-bottom: 50px;
+      border-radius: 0;
     }
+    #nliste{border-radius: 0;}
 
-    #loisir{justify-content: space-around;}
+    #loisir{
+      justify-content: space-around;
+    }
+    /*utile par rapport à mes image les plus petites pour ne pas intervenir dessus.
+    Mais principalement pour garder cette disposition jusqu'a mon prochain media.
+    Ne pas avoir de media intermediaire  */
     #loisir figure{
-      max-width: 500px;
       min-width: 360px;
+      max-width: 500px;
     }
 
-    .partie img{height: auto;
-    object-position:  0  ;}
+    /* Supprime mes réglages précedent de toute mes images,
+    notemment le décalage d'object position */
+    .partie img{
+      height: auto;
+      object-position:0;}
 
-    .anlo4 img,
-    .anlo1 img {object-position: -280px 0 ;}
-
-    #filtre{
-      flex-basis: 100%;
+    .anlo1 img,
+    .anlo4 img {object-position: -280px 0 ;
     }
-    .titres{
-      margin: 40px;
-            }
-    form{
-      margin:40px;
-    }
+    /*inverse loc et poploc  */
+    
     #hebergement  {
         flex-direction:column-reverse;
     }
+
+    /* Mise en forme differente, centré */
     .poploc{
       width: 70%;
       margin: 20px auto;
     }
-    .loc{ 
-        flex-basis:40%;
-        margin:20px
-      }
+    
     #nliste img{
-      
-      max-height: 180px;
-      height: auto;
+      height: 180px; 
     }
+
+    /* Fait disparaitre le button version desktop et apparaitre
+    la version mobile */
     .desktop{
         display:none;
     }
     .mobile{
         display: inline;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-left: none;
+        border-color: #0065fc;
+        background-color: #0065fc;
+        padding: 10px 10px;
+        color: white;
+        margin-left: -4px;
     }
+    /* Autre disposition de base */
     .partie{
         flex-basis: 45%;
-        margin: 10px;
+        
     }   
+    .partie article{
+      margin:0px auto 60px
+     }
 
-    .partie article{margin:0px auto 60px }
+     /* Changement de disposition dans ce media */
     #nliste_titre,
     #moreh,
-    #l_titre{flex-basis: 90%;}
+    #l_titre{flex-basis: 90%;
+    }
+
+    #pliste_titre{
+      justify-content: space-around;
+    width: 90%;}
 }
 
 @media (max-width:800px){
@@ -567,63 +580,62 @@ footer  ul
               height: auto;
             }
             .desktop{display: none;}
-            .mobile{display: inline;}
-         
-            
-            #titres,
-            #filtre,
-            form {
-              
-              margin:0;
+            .mobile{
+              display: inline;
             }
-            .poploc{width: 80%;}
-            .loc{flex-basis: 80%;}
             nav{
-                flex-basis: 100%;
-                flex-wrap: wrap;
-                flex-direction: row-reverse;
+              flex-basis: 100%;
+              flex-wrap: wrap;
+              flex-direction: row-reverse;
+              display: flex;
+              justify-content: space-between;
             }
             nav>ul{
-                order: 2;
-                flex-basis: 100%;
-                margin-top: 10px;
-                justify-content: center;   
+              order: 2;
+              flex-basis: 100%;
+              margin-top: 10px;
+              justify-content: center;   
             }
             nav li{
-              flex-basis: 100%;
-              display: flex;
+            flex-basis: 100%;
+            display: flex;
 
             }
 
             #inscrire{
-              align-items: flex-end;
+            align-items: flex-end;
             }
             #filtre,
             form,
             #titres{
-              margin:10px
+            margin:10px
             }
 
             #filtre ul{padding: 0;}
             #filtre ul li {margin:10px;}
 
-            nav ul{padding:0}
+            nav ul{
+              padding:0
+            }
             .ancreh{
-                  flex-basis: 100%;
-                  border-bottom:5px #f2f2f2 solid ;
-                  text-align: center;
+                flex-basis: 100%;
+                border-bottom:5px #f2f2f2 solid ;
+                text-align: center;
 
             }
             .ancreh:hover{
-                border-bottom: 5px  #0065fc solid;
-                border-top:0px #0065fc solid ;
-                color:#0065fc;
+              border-bottom: 5px  #0065fc solid;
+              border-top:0px #0065fc solid ;
+              color:#0065fc;
             }
-            nav{
-                display: flex;
-                justify-content: space-between;
+           
+            .poploc{
+              width: 80%;
             }
-
+            .loc{
+              flex-basis: 80%;
+            }
+           /* supprime le backgound et ajoute des ombre au figures */
             #nliste{
               background-color:white;
             }
@@ -633,17 +645,15 @@ footer  ul
               border-radius: 15px;
               box-shadow: 5px 10px 5px #f2f2f2 ;
             }
-            .partie img{height: auto;
-              object-position:  0  ;}
+            .partie img{
+                height: auto;
+                object-position:0;
+              }
 
             .nliste img
             #loisir{
-                
-                margin-bottom: auto ;
-                
+                margin-bottom: auto ; 
             }
-            .loc:nth-of-type(5) img{height: 300px}
-            
             .partie{
               flex-basis: 80%;
               flex-grow: 1;
@@ -654,7 +664,7 @@ footer  ul
          
             .ancre_loisir{
               height: auto;
-              width: 90%;
+              width: 80%;
             }
 
             #loisir figure{
@@ -670,42 +680,38 @@ footer  ul
             }
             #loisir img{
               height: 300px;
-              
-             
             }
-         
-          [class*="Footer"] h3{
-            margin:20px 0 20px 0px;
-        }
         #Apropos,
         #NosHeb,
         #Assistance{margin-left: 60px;}
 }
 
 @media (max-width:600px){
-  footer{
-    flex-direction: column;
-} 
+        footer{
+        flex-direction: column;
+        } 
         #Apropos,
         #NosHeb,
         #Assistance{margin-left: 40px;}
   
-  .partie{
-    flex-basis: 90%;
-  }
-  .poploc{
-    width: 90% ;
-  }
-  .loc{
-    flex-basis: 90%;
-  }
-  #loisir figure{
-    flex-basis: 90%;
-  }
+        .partie{
+          flex-basis: 90%;
+        }
+        .poploc{
+          width: 90% ;
+        }
+        .loc{
+          flex-basis: 90%;
+        }
+        #loisir figure{
+          flex-basis: 90%;
+        }
 
-  #nliste img,
-  #pliste img,
-  #loisir img{
-    height: 200px;
-  }
-}
+        #nliste img,
+        #pliste img,
+        #loisir img{
+          height: 200px;
+        }
+
+        .fa-chart-line::before{margin-left: 100px;}
+      }
