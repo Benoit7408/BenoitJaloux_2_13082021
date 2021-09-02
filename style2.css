@@ -355,7 +355,7 @@ button.desktop{
     flex-basis: 23%;
     margin: 10px;
     border-radius: 15px;
-    padding: 0 0 100px 0;
+    padding: 0 0 0px 0;
 }
 /* Display flex pour ensuite un flex grow sur enfant */
 .partie figure{
@@ -632,16 +632,12 @@ Apparait uniquement dans le responsive smartphone */
               color:#0065fc;
             }
            
-            .poploc{
-              width: 90%;
-            }
-            .loc{
-              flex-basis: 90%;
-            }
+           
            /* supprime le backgound et ajoute des ombre au figures */
             #nliste{
               background-color:white;
             }
+            .loc{flex-basis: 90%;}
             
             #nliste figure{
               border:2px white solid;
@@ -658,8 +654,8 @@ Apparait uniquement dans le responsive smartphone */
                 margin-bottom: auto ; 
             }
             .partie{
-              flex-basis: 90%;
-              flex-grow: 1;
+              flex-basis: 95%;
+              
               justify-content: space-around;
               padding: 0;
               margin:auto;
@@ -667,12 +663,11 @@ Apparait uniquement dans le responsive smartphone */
          
             .ancre_loisir{
               height: auto;
-              width: 90%;
             }
 
             #loisir figure{
               margin:10px;
-              flex-basis: 90%;
+              
               max-width: none;
               min-width: 0;
             }
@@ -682,6 +677,7 @@ Apparait uniquement dans le responsive smartphone */
               margin: 0;
             }
             #loisir img{
+              
               height: 200px;
             }
         #Apropos,
@@ -697,18 +693,7 @@ Apparait uniquement dans le responsive smartphone */
         #NosHeb,
         #Assistance{margin-left: 40px;}
   
-        .partie{
-          flex-basis: 90%;
-        }
-        .poploc{
-          width: 90% ;
-        }
-        .loc{
-          flex-basis: 90%;
-        }
-        #loisir figure{
-          flex-basis: 90%;
-        }
+       
 
         #nliste img,
         #pliste img,
