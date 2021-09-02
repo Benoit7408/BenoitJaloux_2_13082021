@@ -38,7 +38,7 @@ html,body {
   margin:0;
 }
 /*J'utilise 95% de la page et je centre tout les éléments sauf le footer*/
-main, header,#titres,form,#filtre{
+main, header,form,#filtre{
   width: 95%;
   margin:auto;
 }
@@ -93,6 +93,9 @@ Le padding est separé pour qu'il ne sois pas créer au passage de la souris( si
 .ancreh:hover{
   border-top:2px #0065fc solid;
   color: #0065fc;
+}
+#titres{
+  flex-basis:100%
 }
 /* Mon icone de localisation */
 .fa-map-marker-alt{
@@ -527,12 +530,12 @@ Apparait uniquement dans le responsive smartphone */
 
     /* Mise en forme differente, centré */
     .poploc{
-      width: 70%;
+      width: 90%;
       margin: 20px auto;
     }
     
     #nliste img{
-      height: 180px; 
+      height: 200px; 
     }
 
     /* Fait disparaitre le button version desktop et apparaitre
@@ -563,7 +566,7 @@ Apparait uniquement dans le responsive smartphone */
      /* Changement de disposition dans ce media */
     #nliste_titre,
     #moreh,
-    #l_titre{flex-basis: 90%;
+    #l_titre{flex-basis: 80%;
     }
 
     #pliste_titre{
@@ -575,7 +578,7 @@ Apparait uniquement dans le responsive smartphone */
 
             #logo{
               position: absolute;
-              margin-bottom: 100px;
+              margin-bottom: 250px;
               width: 25%;
               height: auto;
             }
@@ -630,10 +633,10 @@ Apparait uniquement dans le responsive smartphone */
             }
            
             .poploc{
-              width: 80%;
+              width: 90%;
             }
             .loc{
-              flex-basis: 80%;
+              flex-basis: 90%;
             }
            /* supprime le backgound et ajoute des ombre au figures */
             #nliste{
@@ -655,7 +658,7 @@ Apparait uniquement dans le responsive smartphone */
                 margin-bottom: auto ; 
             }
             .partie{
-              flex-basis: 80%;
+              flex-basis: 90%;
               flex-grow: 1;
               justify-content: space-around;
               padding: 0;
@@ -664,12 +667,12 @@ Apparait uniquement dans le responsive smartphone */
          
             .ancre_loisir{
               height: auto;
-              width: 80%;
+              width: 90%;
             }
 
             #loisir figure{
               margin:10px;
-              flex-basis: 80%;
+              flex-basis: 90%;
               max-width: none;
               min-width: 0;
             }
@@ -679,7 +682,7 @@ Apparait uniquement dans le responsive smartphone */
               margin: 0;
             }
             #loisir img{
-              height: 300px;
+              height: 200px;
             }
         #Apropos,
         #NosHeb,
