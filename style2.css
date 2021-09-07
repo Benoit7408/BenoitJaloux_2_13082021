@@ -28,7 +28,6 @@
   100%{
       color:white;
       background-color:black ;
-      
       animation-fill-mode: forwards;
   }
 }
@@ -38,7 +37,7 @@
 .loisir:hover{scale: 1.05;}
 /* Je supprime les marge automatique et je charge ma police */
 html,body {
-  font-family: "raleway";
+  font-family: "raleway", Arial, Helvetica, sans-serif;
   margin:0;
 }
 /*J'utilise 95% de la page et je centre tout les éléments sauf le footer*/
@@ -118,6 +117,7 @@ form input{
 }
 /* Mon bouton de recherche en desktop */
 button.desktop{
+    font-family:"raleway", Arial, Helvetica, sans-serif;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     border-left: none;
@@ -132,7 +132,7 @@ button.desktop{
 
 /* Ma police dans le champ de recherche */
 ::placeholder{
-  font-family: "Raleway";
+  font-family: "Raleway",Arial, Helvetica, sans-serif;
   color: BLACK;
   font-weight: 900;
 }
@@ -261,6 +261,10 @@ button.desktop{
 .ancre_figcaption *{
   margin: 5px 0 0 10PX ;
 }
+
+.ancre_figcaption strong{
+  margin: 0;
+}
 /* creer une marge en dessous de afficher plus */
 #moreh{
    flex: 0 100%;
@@ -308,7 +312,11 @@ button.desktop{
 /* Tout mes élément dans le figcaption hebergement populaire */
 .ancre_popfigcaption *
 {
-  margin-left: 10px;
+  margin: 5px 20px 0px 10px;
+}
+
+.ancre_popfigcaption strong{
+  margin: 0;
 }
 /*  */
 #pliste figcaption{
@@ -344,7 +352,7 @@ button.desktop{
 #activite {
     display: flex;
     flex-wrap: wrap;
-    align-items:flex-start;
+    
     justify-content: space-between;
 }
 /* Mon titre de la section loisir */
@@ -358,45 +366,61 @@ button.desktop{
     display: flex;
     flex-direction: column;
     flex-basis: 22%;
-    height: 640px;
+    height: 540px;
+    margin-bottom: 40px;
 }
 
 .p1 article{
   display: flex;
   flex-direction: column;
+  height: 100%;
+}
+.loisir1{height: 100%;}
+.loisir2{
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  
+  
 }
 
-.anlo1{height:550px}
-.anlo4{height:550px}
-.loisir2{
-display: flex;
-flex-direction: column;}
-
-.anlo2{height:245px}
-.anlo5{height:200px}
-.anlo6{height: 226px;}
 .loisir3{
   display: flex;
   flex-direction: column;
+  height:40%;
+  margin:auto  0 0 0;
+}
+.loisir5{
+  display: flex;
+  flex-direction: column;
+  height: 43%;
+  
+
 }
 
-.anlo3{height: 180px;
-  }
+.loisir6{
+  display: flex;
+  flex-direction: column;
+  height:48%;
+  margin:auto 0 0 0;
+}
 
 /* Display flex pour ensuite un flex grow sur enfant */
 .partie figure{
     display:flex;
     flex-direction: column;
-    margin:0;
+    margin:auto;
     border-radius: 15px;
     width: 100%;
-    box-shadow: 10px 10px 5px #f2f2f2
+    box-shadow: 10px 10px 5px #f2f2f2;
+    height: 100%;
 }
 /* Regle comune de toute mes ancres qui contiennent mes images
 display flex utile pour mon responsive */
 .ancre_loisir{
     display: flex;
     flex-grow: 1;
+    height: 60%;
    
 }
 /* Récgle  génèrale de mes ancres images */
@@ -405,39 +429,36 @@ display flex utile pour mon responsive */
   object-fit: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+
 }
+
 /* Travail sur la hauteur de mes images par rapport au ancre pour
 ensuite le positionnement par rapport à la maquette */
 
 .anlo1 img,
 .anlo4 img{
     
-    object-position: -200px 0;
+    object-position: -150px 0;
     }
 
 .anlo2 img{
   
-  object-position: 0 -165px;
+  object-position: 0 -175px;
 }
 .anlo3 img{
   
-  object-position: 0 0;
+  object-position: 0 -20px;
 }
 .anlo5 img{
 
-  object-position:00px 0px;
+  object-position:0px -10px;
 }
 .anlo6 img{
   
-  object-position: 0 0px;
+  object-position: 0 -20px;
 }
 
-/* Tableau de mes marge pour p2 */
 
-.loisir2{margin: 0 0 30px 0;}
-.loisir3{margin: 30px 0 0 0;}
-.loisir5{margin: 0 0 30px 0;}
-.loisir6{margin: 30px 0 0 0;}
 
 /* Regle générale de figcaption */
 
@@ -535,10 +556,16 @@ Apparait uniquement dans le responsive smartphone */
     /* Supprime mes réglages précedent de toute mes images,
     notemment le décalage d'object position */
     .partie img{
-      object-position:0;}
+      object-position:center;}
 
     .anlo1 img,
-    .anlo4 img {object-position: -280px 0 ;
+    .anlo4 img {object-position: -150px 0 ;
+    }
+    .anlo5 img{
+      object-position: 0 10px;
+    }
+    .anlo6 img{
+      object-position: 0 -40px;
     }
     /*inverse loc et poploc  */
     
@@ -553,9 +580,9 @@ Apparait uniquement dans le responsive smartphone */
     }
     
     #nliste img{
-      height: 200px; 
+      height: 210px; 
     }
-
+    
     /* Fait disparaitre le button version desktop et apparaitre
     la version mobile */
     .desktop{
@@ -597,9 +624,10 @@ Apparait uniquement dans le responsive smartphone */
 
             #logo{
               position: absolute;
-              margin-bottom: 250px;
+              padding: 15px 0 250px 10px;
               width: 150px;
               height: auto;
+              z-index: 0;
             }
             .desktop{display: none;}
             .mobile{
@@ -641,6 +669,7 @@ Apparait uniquement dans le responsive smartphone */
               padding:0
             }
             .ancreh{
+                z-index: 1;
                 flex-basis: 100%;
                 border-bottom:5px #f2f2f2 solid ;
                 text-align: center;
@@ -657,6 +686,11 @@ Apparait uniquement dans le responsive smartphone */
             #nliste{
               background-color:white;
             }
+
+            .loisir img{
+              object-position: center;
+              width: 100%;
+            }
             .loc{flex-basis: 90%;}
             
             #nliste figure{
@@ -665,7 +699,9 @@ Apparait uniquement dans le responsive smartphone */
               box-shadow: 10px 10px 5px #f2f2f2 ;
             }
 
-            
+            .loc6 img{object-position: 0 -450px;}
+            .anlo5 img{object-position: 0 -35px;}
+            .anlo1 img{object-position: 0 -70px;}
             .partie{
               flex-basis: 92%;
               margin: auto;
@@ -685,12 +721,9 @@ Apparait uniquement dans le responsive smartphone */
             }
 
             .ancre_loisir{
-              height:200px;
+              height:170px;
             }
-            .loisir img{
-              object-position: center;
-              height: 200px;
-            }
+            
         #Apropos,
         #NosHeb,
         #Assistance{
@@ -709,13 +742,16 @@ Apparait uniquement dans le responsive smartphone */
         #Assistance{
           margin-left: 40px;
         }
-  
-       
-
+        .loc6 img{object-position: center;}
+        .anlo1 img {object-position: center;}
+        .ancre_loisir{
+          height:180px;
+        }
+        
+        .poploc figure,
         #nliste img,
-        #pliste img,
         #loisir img{
-          height: 200px;
+          height: 180px;
         }
 
         
