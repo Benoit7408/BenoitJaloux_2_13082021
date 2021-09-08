@@ -679,7 +679,7 @@ Apparait uniquement dans le responsive smartphone */
             ---------------------------------------*/
             #logo{
               position: absolute;
-              padding: 15px 0 250px 10px;
+              padding: 0px 0 250px 10px;
               width: 150px;
               height: auto;
               z-index: 0;
@@ -791,7 +791,7 @@ Apparait uniquement dans le responsive smartphone */
               width: 100%;
             }
             .anlo5 img{
-              object-position: 0 -35px;
+              object-position: 0 -20px;
             }
 
             .anlo1 img{
@@ -832,7 +832,7 @@ Apparait uniquement dans le responsive smartphone */
           .anlo1 img {
             object-position: center;
           }
-          
+
           .ancre_loisir{
             height:180px;
           }
