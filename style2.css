@@ -1,0 +1,849 @@
+
+/* Toute mes animations utilisé ainsi que mon chargement de police */
+@font-face {
+  font-family: "Raleway";
+  src: url(fonts/Raleway-VariableFont_wght.ttf) format("truetype"),
+      url(fonts/Raleway-Italic-VariableFont_wght.ttf) format("truetype");
+}
+
+@keyframes moove{
+  0%{
+      color: #0065fc;
+  }
+  50%{
+      color: red;
+  }
+  100%{
+      color: black;
+  }
+}
+
+@keyframes couleur{
+  0%{
+      color: black;
+  }
+  100%{
+      color:white;
+      background-color:black ;
+      animation-fill-mode: forwards;
+  }
+}
+
+/* Ma trasformation Scale */
+.loc:hover{
+  scale:1.05;
+}
+.poploc:hover{
+  scale:1.05;
+}
+.loisir:hover{
+  scale: 1.05;
+}
+
+/* Je supprime les marge automatique et je charge ma police 
+Egalement des polices de secours*/
+html,body {
+  font-family: "raleway", Arial, Helvetica, sans-serif;
+  margin:0;
+}
+
+/*J'utilise 95% de la page et je centre tout les éléments sauf le footer*/
+main, header,form,#filtre{
+  width: 95%;
+  margin:auto;
+}
+
+/* j'ecrase la couleur par defaut de mes ancres et je supprime le soulignement.
+Suppresion des puces de li */
+a{
+  color:black;
+  text-decoration: none;
+}
+li{
+  list-style-type: none;
+}
+
+/*Header en flex, retour a la ligne pour le responsive,supprime le strech axe secondaire et espace sur axe pricinpale,
+creation d'une marge top */
+header{
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*taille du logo */
+#logo{
+  width: 150px;
+}
+
+/*ma nav prend 40 % de mon header ou va à la ligne( flex parent)
+,les enfants vont à la ligne si besoin */
+nav{
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 40%;
+}
+
+/*ul en ligne et prend la place maximale accordé tout en ayant le meme espace avant apres et entre chaques enfants*/
+nav  ul{
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-evenly
+}
+
+/* Je crée un padding sur mes ancre de navigation, ancre_inscrire est séparé de mon ul pour faciliter le responsive
+Le padding est separé pour qu'il ne sois pas créer au passage de la souris( sinon un decalage/animation se fait)*/
+.ancreh{
+  padding:40px 20px 20px;
+}
+
+#inscrire{
+  color:#0065fc;
+  font-weight:700;
+  padding: 40px 20px 20px;
+}
+/* Pour mon passage de souris */
+#inscrire:hover,
+.ancreh:hover{
+  border-top:2px #0065fc solid;
+  color: #0065fc;
+}
+
+#titres{
+  flex-basis:100%
+}
+
+/* Mon icone de localisation */
+.fa-map-marker-alt{
+    height: 25px;
+    border: 2px #f2f2f2 solid;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #f2f2f2;
+    padding:10px 12px 1px 13px;
+}
+
+/* Form
+--------------------------------------------------------------
+--------------------------------------------------------------
+Mon champ de recherche----------------------------------------*/
+form input{
+  border: 2px #f2f2f2 solid;
+  border-right: none;
+  padding: 10px ;
+  margin:0 0 0 -4px;
+}
+/* Mon bouton de recherche en desktop */
+button.desktop{
+    font-family:"raleway", Arial, Helvetica, sans-serif;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left: none;
+    border-color: #0065fc;
+    background-color: #0065fc;
+    padding:10px 10px;
+    color: white;
+    font-weight: 600;
+    margin-left: -4px;
+}
+
+/* Ma police dans le champ de recherche */
+::placeholder{
+  font-family: "Raleway",Arial, Helvetica, sans-serif;
+  color: BLACK;
+  font-weight: 900;
+}
+
+
+/*Filtre ------------------------------------------------------
+---------------------------------------------------------------
+---------------------------------------------------------------
+ma classe filtre et la suppression du strech axe secondaire */
+#filtre
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 15px;
+}
+/*ma liste a puce en ligne */
+#filtre > ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis:90%;
+}
+/*bordure des élement de ma liste */
+#filtre li{
+    font-weight: 500;
+    border: 2px #f2f2f2 solid;
+    padding: 0px 20px;
+    border-radius: 25px;
+    margin:10px 25px;
+}
+/* Mes animation(key frame en haut de page) */
+#filtre li:hover{
+  animation: couleur 0.5s;
+  animation-fill-mode: forwards;
+}
+#filtre ul i:hover{
+  animation: moove 1s;
+  animation-fill-mode: forwards;
+}
+/*les icones enfant direct de filtre et leur placements*/
+#filtre i{
+  padding: 10px;
+  color: #0065FC;
+  background-color: #DEEBFF;
+  border-radius: 25px;
+  margin-right: 15px;
+  margin-left: -22px;
+  border: 1px #DEEBFF solid;
+}
+.fas.fa-child{padding: 10px 13px!important}
+
+/* Mon icone information */
+.fas.fa-info{
+    background-color: white!important;
+    border:2px #f2f2f2 solid!important;
+    padding: 5px 10px!important;
+    margin:15px 15px 15px 0!important;
+}
+/*Pour placer coorectement mon icone info  */
+#filtre>div{
+  display: flex;
+  width: 95%;
+  margin-top:10px;
+  align-items: center;
+}
+
+
+/*
+Section Hebergement ------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Hebergement en ligne et wrap, supprime le stretch et espaceNliste et pliste */
+#hebergement{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+}
+
+/* La couleur de mes icones dans i */
+#hebergement i{
+    color: #0065fc;
+}
+
+#hebergement figcaption{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*taille de Nliste, arrondi de bordure... */
+#nliste{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-basis: 69%;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    align-items: flex-start;
+}
+
+/*Me permet de placer mon titre au dessus des autres éléments  */
+#nliste_titre{
+    flex: 0 100%;
+    margin: 10px 0 0 45px;
+}
+
+/*taille de base , utilise espace max, bordure ... */
+.loc{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 28%;
+    border: 4px white solid;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.loc>figure{
+    flex-grow: 1;
+    margin: 0;
+}
+/* En flex , sinon mon image est dans un inline */
+.ancre_image{
+    display: flex;
+}
+
+#nliste img{
+    display: flex;
+    width: 100%;
+    height: 170PX;
+    object-fit: cover;
+    border-top-left-radius:15px ;
+    border-top-right-radius: 15px;
+}
+
+/* utilise l'espace disponible */
+#nliste figcaption{
+    margin-top: 10px;
+}
+
+/* Créer une marge dans tout les elements enfant de figcaption */
+.ancre_figcaption *{
+  margin: 5px 0 0 10PX ;
+}
+
+.ancre_figcaption strong{
+  margin: 0;
+}
+/* creer une marge en dessous de afficher plus */
+#moreh{
+   flex: 0 100%;
+   margin-left: 45px;
+}
+
+/* pliste, enfant d'hebergement */
+#pliste{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+
+#pliste_titre{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 92%;
+    margin: 10px auto 12px;
+}
+
+.fa-chart-line::before{
+  color: black;
+}
+
+/* toutle les figure de pliste */
+.poploc{
+    display: flex;
+    border:4px white solid;
+    border-radius: 15px;
+    background-color: white;
+    margin:20px
+}
+
+.poploc>figure{
+    display:flex;
+    margin: 0px;
+    flex-grow: 1;
+    height: 200px;
+}
+
+/* Les ancres des figures utilisent l'espace disponible */
+.ancre_popimage{
+  flex:1 40%;
+}
+
+/* Tout mes élément dans le figcaption hebergement populaire */
+.ancre_popfigcaption *{
+  margin: 5px 20px 0px 10px;
+}
+
+.ancre_popfigcaption strong{
+  margin: 0;
+}
+
+/*  */
+#pliste figcaption{
+  flex:1 60%;
+}
+
+#pliste img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.star{
+  margin:15px 0px 10px 10px;
+}
+
+/* la selection de mes icones etoile */
+#nliste > article:nth-of-type(2n+1) > figure > figcaption > p > a > i:last-child{
+  color:#DEEBFF;
+}
+#nliste > article.loc:nth-of-type(4) > figure > figcaption > p > a > i:nth-of-type(1n+4){
+  color:#DEEBFF;
+}
+#pliste > article:nth-of-type(1n+2) > figure > figcaption > p > a > i:last-child{
+  color:#DEEBFF;
+}
+
+/* Ma section activite
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Mon id activite enfant de main */
+#activite{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Mon titre de la section loisir */
+#l_titre{
+    flex-basis: 100%;
+    margin:40px 10px 10px 0px;
+}
+
+/* 4 grand élement, eux meme divise par la suite  */
+.partie{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 22%;
+    height: 540px;
+    margin-bottom: 40px;
+}
+
+.p1 article{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.loisir1{
+  height: 100%;
+}
+
+.loisir2{
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+}
+
+.loisir3{
+  display: flex;
+  flex-direction: column;
+  height:40%;
+  margin:auto  0 0 0;
+}
+
+.loisir5{
+  display: flex;
+  flex-direction: column;
+  height: 43%;
+}
+
+.loisir6{
+  display: flex;
+  flex-direction: column;
+  height:48%;
+  margin:auto 0 0 0;
+}
+
+/* Display flex pour ensuite un flex grow sur enfant */
+.partie figure{
+    display:flex;
+    flex-direction: column;
+    margin:auto;
+    border-radius: 15px;
+    width: 97%;
+    box-shadow: 10px 10px 5px #f2f2f2;
+    height: 100%;
+}
+
+/* Regle comune de toute mes ancres qui contiennent mes images
+display flex utile pour mon responsive */
+.ancre_loisir{
+    display: flex;
+    flex-grow: 1;
+    height: 60%;
+}
+
+/* Récgle  génèrale de mes ancres images */
+.ancre_loisir img{
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/* Mon ajustement des images
+-------------------------------------------------------------
+-------------------------------------------------------------
+------------------------------------------------------------- */
+.anlo1 img,
+.anlo4 img{
+    object-position: -150px 0;
+    }
+.anlo2 img{
+  object-position: 0 -175px;
+}
+
+.anlo3 img{
+  object-position: 0 -20px;
+}
+
+.anlo5 img{
+  object-position:0px -10px;
+}
+
+.anlo6 img{
+  object-position: 0 -20px;
+}
+
+/* Regle générale de figcaption */
+#activite figcaption{
+  background-color: white;
+  width: 100%;
+  margin: auto;
+  border: 1px #f2f2f2 solid;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/* h3 de figcaption */
+.ancre_loisir_figcaption h3{
+  padding: 20px;
+  margin: 0;
+}
+
+/* Mon footer
+-----------------------------------------------------------
+-----------------------------------------------------------
+-----------------------------------------------------------
+Régle génèrale de mon footer */
+footer{  
+    margin-left: 0;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* attribut la place dispo a toutes mes id */
+#Apropos,
+#NosHeb,
+#Assistance{
+    flex-grow: 1;
+    flex-basis: 20%;
+}
+
+footer h3{
+    margin-left: 0px;
+}
+
+footer  ul{
+  padding-left: 0px;
+}
+
+/* padding utile pour le tactile des smartphones */
+footer li{
+  padding: 5px 0px;
+}
+
+/* Pour coller un peu plus à la maquette */
+#Apropos{
+  margin-left: 60px;
+}
+
+/* Fait disparaitre l'icone rechercher.
+Apparait uniquement dans le responsive smartphone */
+.mobile{
+  display: none;
+}
+
+/* Premier @media
+-------------------------------------------------------------------
+--------------------------------------------------------------------
+-------------------------------------------------------------------- */
+@media (max-width:1400px){
+
+    /* utilise à nouveau 100% de la largeur de page pour main */
+    main {
+      width: 100%;
+      margin:0px;
+    }
+
+    /* pour le responsive,évite un collment des élément trop rapide */
+    nav{
+        flex-basis:70%
+    }
+
+    #filtre>h2{
+      flex-basis: 100%;
+      padding: 0;
+    } 
+
+    #filtre ul{padding: 0}
+    /* Change mon espace utile pour mes enfants pour avoir une autre disposition */
+    .loc{ 
+      flex-basis:42%;
+      margin:20px 0;
+    }
+
+    #pliste{  
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+
+    #nliste{
+      border-radius: 0;
+    }
+
+    /* Supprime mes réglages précedent de toute mes images*/
+    .partie img{
+      object-position:center;
+    }
+
+    .anlo1 img,
+    .anlo4 img {
+      object-position: -150px 0 ;
+    }
+
+    .anlo5 img{
+      object-position: 0 0px;
+    }
+
+    .anlo6 img{
+      object-position: 0 -40px;
+    }
+
+    /*inverse loc et poploc  */
+    #hebergement  {
+        flex-direction:column-reverse;
+    }
+
+    /* Mise en forme differente, centré */
+    .poploc{
+      width: 90%;
+      margin: 20px auto;
+    }
+
+    #nliste img{
+      height: 210px; 
+    }
+    
+    /* Fait disparaitre le button version desktop et apparaitre
+    la version mobile */
+    .desktop{
+        display:none;
+    }
+    .mobile{
+        display: inline;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-left: none;
+        border-color: #0065fc;
+        background-color: #0065fc;
+        padding: 10px 10px;
+        color: white;
+        margin-left: -4px;
+    }
+
+    #activite{
+      justify-content: space-around;
+    }
+    /* Autre disposition de base */
+    .partie{
+        flex-basis: 40%;
+        margin: 0 0 40px;   
+    }   
+
+     /* Changement de disposition dans ce media */
+    #nliste_titre,
+    #moreh,
+    #l_titre{
+      flex-basis: 90%;
+      margin: auto;
+    }
+
+    #pliste_titre{
+    width: 90%;
+    margin: auto;
+    }
+}
+
+/* Deuxieme @media 
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+------------------------------------------------------------------------- */
+@media (max-width:800px){
+            
+            /* Header -----------------------------
+            ---------------------------------------*/
+            #logo{
+              position: absolute;
+              padding: 15px 0 250px 10px;
+              width: 150px;
+              height: auto;
+              z-index: 0;
+            }
+
+            .desktop{
+              display: none;
+            }
+
+            .mobile{
+              display: inline;
+            }
+
+            header{
+              width:100%;
+            }       
+
+            nav{
+              flex-basis: 100%;
+              flex-wrap: wrap;
+              flex-direction: row-reverse;
+              display: flex;
+              justify-content: space-between;
+            }
+
+            nav>ul{
+              order: 2;
+              flex-basis: 100%;
+              margin-top: 10px;
+              justify-content: center;
+              padding: 0;   
+            }
+
+            nav li{
+              flex-basis: 100%;
+              display: flex;
+            }
+            .ancreh{
+              z-index: 1;
+              flex-basis: 100%;
+              border-bottom:5px #f2f2f2 solid ;
+              text-align: center;
+            }
+
+            .ancreh:hover{
+              border-bottom: 5px  #0065fc solid;
+              border-top:0px #0065fc solid ;
+              color:#0065fc;
+            }
+            #inscrire{
+              align-items: flex-end;
+            }
+
+            #titres{
+              flex-basis: 95%;
+              margin: auto;
+            }
+
+            /* Filtre 
+            -----------------------------------------
+            -----------------------------------------*/
+            #filtre ul{
+              padding: 0;
+            }
+            #filtre ul li {
+              margin:10px;
+            }
+
+           /* Section hebergement ---------------------
+           --------------------------------------------
+           --------------------------------------------
+           supprime le backgound et ajoute des ombre au figures */
+            #nliste{
+              background-color:white;
+            }
+            .loc{
+              flex-basis: 90%;
+            }
+            
+            #nliste figure{
+              border:2px white solid;
+              border-radius: 15px;
+              box-shadow: 10px 10px 5px #f2f2f2 ;
+            }
+
+            /* Section activite
+            ------------------------------------------------
+            ------------------------------------------------
+            ------------------------------------------------ */
+            .partie{
+              flex-basis: 92%;
+              margin: auto;
+              padding: 0;
+              height: auto;
+            }
+
+            .loisir{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-around;
+              margin: 20px 0;
+            }
+            .ancre_loisir{
+              height:170px;
+            }
+
+            .loisir img{
+              object-position: center;
+              width: 100%;
+            }
+            .anlo5 img{
+              object-position: 0 -35px;
+            }
+
+            .anlo1 img{
+              object-position: 0 -70px;
+            }
+
+            .loc6 img{
+              object-position: 0 -450px;
+            }
+
+            /* Footer
+            ---------------------------------------
+            ---------------------------------------
+            --------------------------------------- */
+            #Apropos,
+            #NosHeb,
+            #Assistance{
+              margin-left: 60px;
+            }
+}
+
+/* Troisieme @media 
+----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+------------------------------------------------------------------------------ */
+@media (max-width:600px){
+        
+          .poploc figure,
+          #nliste img,
+          .loisir img{
+            height: 180px;
+          } 
+
+          .loc6 img{
+            object-position: center;
+          }
+
+          .anlo1 img {
+            object-position: center;
+          }
+          
+          .ancre_loisir{
+            height:180px;
+          }
+        
+          footer{
+          flex-direction: column;
+          }
+  
+          #Apropos,
+          #NosHeb,
+          #Assistance{
+            margin-left: 40px;
+          }
+}
