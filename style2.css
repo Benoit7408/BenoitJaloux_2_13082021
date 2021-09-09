@@ -124,7 +124,7 @@ Le padding est separé pour qu'il ne sois pas créer au passage de la souris( si
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     background-color: #f2f2f2;
-    padding:16px 16px 7px 16px;
+    padding:15px 16px 7px 15px;
 }
 
 /* Form
@@ -136,7 +136,7 @@ form input{
   border-right: none;
   padding: 14px 10px 16px ;
   margin:0 0 0 -5px;
-  width: 235px;
+  width: 230px;
   font-size: medium;
 }
 /* Mon bouton de recherche en desktop */
@@ -768,7 +768,7 @@ Apparait uniquement dans le responsive smartphone */
             }
             #filtre ul{
               padding: 0;
-              flex-basis: 80%;
+              flex-basis: 90%;
             }
             #filtre ul li {
               margin:10px 20px 10px 0;
