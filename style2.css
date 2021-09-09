@@ -131,6 +131,9 @@ Le padding est separé pour qu'il ne sois pas créer au passage de la souris( si
 --------------------------------------------------------------
 --------------------------------------------------------------
 Mon champ de recherche----------------------------------------*/
+form{
+  display:flex;
+}
 form input{
   border: 2px #f2f2f2 solid;
   border-right: none;
