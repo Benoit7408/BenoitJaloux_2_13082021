@@ -3,7 +3,7 @@
 @font-face {
   font-family: "Raleway";
   src: url(fonts/Raleway-VariableFont_wght.ttf) format("truetype"),
-      url(fonts/Raleway-Italic-VariableFont_wght.ttf) format("truetype");
+       url(fonts/Raleway-Italic-VariableFont_wght.ttf) format("truetype");
 }
 
 @keyframes moove{
@@ -31,13 +31,13 @@
 
 /* Ma trasformation Scale */
 .loc:hover{
-  scale:1.05;
+  transform :scale(1.05);
 }
 .poploc:hover{
-  scale:1.05;
+  transform:scale(1.05);
 }
 .loisir:hover{
-  scale: 1.05;
+  transform :scale(1.05);
 }
 
 /* Je supprime les marge automatique et je charge ma police 
@@ -49,7 +49,7 @@ html,body {
 
 /*J'utilise 95% de la page et je centre tout les éléments sauf le footer*/
 main, header,form,#filtre{
-  width: 95%;
+  width: 96%;
   margin:auto;
 }
 
@@ -119,12 +119,12 @@ Le padding est separé pour qu'il ne sois pas créer au passage de la souris( si
 
 /* Mon icone de localisation */
 .fa-map-marker-alt{
-    height: 24px;
+    height: 26px;
     border: 2px #f2f2f2 solid;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     background-color: #f2f2f2;
-    padding:9px 12px 4px 13px;
+    padding:16px 16px 7px 16px;
 }
 
 /* Form
@@ -134,21 +134,26 @@ Mon champ de recherche----------------------------------------*/
 form input{
   border: 2px #f2f2f2 solid;
   border-right: none;
-  padding: 10px ;
+  padding: 14px 10px 16px ;
   margin:0 0 0 -5px;
+  width: 250px;
+  font-size: medium;
 }
 /* Mon bouton de recherche en desktop */
 button.desktop{
     font-family:"raleway", Arial, Helvetica, sans-serif;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
     border-left: none;
     border-color: #0065fc;
     background-color: #0065fc;
-    padding:10px 10px;
+    padding:15px 10px;
     color: white;
     font-weight: 600;
     margin-left: -4px;
+    cursor: pointer;
+    width: 130px;
+    font-size: medium;
 }
 
 /* Ma police dans le champ de recherche */
@@ -174,15 +179,18 @@ ma classe filtre et la suppression du strech axe secondaire */
 #filtre > ul{
     display: flex;
     flex-wrap: wrap;
-    flex-basis:90%;
+    flex-basis:65%;
+    
 }
 /*bordure des élement de ma liste */
 #filtre li{
-    font-weight: 500;
+    font-weight: 800;
     border: 2px #f2f2f2 solid;
-    padding: 0px 20px;
-    border-radius: 25px;
-    margin:10px 25px;
+    padding: 0px 30px;
+    border-radius: 32px;
+    margin:10px 30px 10px 0;
+    cursor: pointer;
+    font-size: medium;
 }
 /* Mes animation(key frame en haut de page) */
 #filtre li:hover{
@@ -195,15 +203,16 @@ ma classe filtre et la suppression du strech axe secondaire */
 }
 /*les icones enfant direct de filtre et leur placements*/
 #filtre i{
-  padding: 10px;
+  padding: 15px;
   color: #0065FC;
   background-color: #DEEBFF;
-  border-radius: 25px;
+  border-radius: 30px;
   margin-right: 15px;
-  margin-left: -22px;
-  border: 1px #DEEBFF solid;
+  margin-left: -31px;
+  border: 2px #DEEBFF solid;
+  font-size: large;
 }
-.fas.fa-child{padding: 10px 13px!important}
+.fas.fa-child{padding: 15px 19px!important}
 
 /* Mon icone information */
 .fas.fa-info{
@@ -248,9 +257,9 @@ Hebergement en ligne et wrap, supprime le stretch et espaceNliste et pliste */
     display:flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    flex-basis: 69%;
+    flex-basis: 68%;
     background-color: #f2f2f2;
-    border-radius: 10px;
+    border-radius: 25px;
     align-items: flex-start;
 }
 
@@ -260,19 +269,26 @@ Hebergement en ligne et wrap, supprime le stretch et espaceNliste et pliste */
     margin: 10px 0 0 45px;
 }
 
+#nliste_titre h2{
+  margin-bottom: 0;
+}
+
 /*taille de base , utilise espace max, bordure ... */
 .loc{
     display: flex;
     flex-wrap: wrap;
     flex-basis: 28%;
     border: 4px white solid;
-    border-radius: 15px;
+    border-radius: 25px;
     background-color: white;
+    box-shadow: 5px 8px 5px #d8d5d5;
+    margin-bottom: 15px;
 }
 
 .loc>figure{
     flex-grow: 1;
     margin: 0;
+    
 }
 /* En flex , sinon mon image est dans un inline */
 .ancre_image{
@@ -284,8 +300,8 @@ Hebergement en ligne et wrap, supprime le stretch et espaceNliste et pliste */
     width: 100%;
     height: 170PX;
     object-fit: cover;
-    border-top-left-radius:15px ;
-    border-top-right-radius: 15px;
+    border-top-left-radius:25px ;
+    border-top-right-radius: 25px;
 }
 
 /* utilise l'espace disponible */
@@ -313,28 +329,30 @@ Hebergement en ligne et wrap, supprime le stretch et espaceNliste et pliste */
     flex-direction: column;
     flex-basis: 30%;
     background-color: #f2f2f2;
-    border-radius: 10px;
+    border-radius: 25px;
 }
 
 #pliste_titre{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 92%;
+    width: 88%;
     margin: 10px auto 12px;
 }
 
 .fa-chart-line::before{
   color: black;
+  font-size: x-large;
 }
 
 /* toutle les figure de pliste */
 .poploc{
     display: flex;
     border:4px white solid;
-    border-radius: 15px;
+    border-radius: 25px;
     background-color: white;
-    margin:20px
+    margin:0px 30px 45px;
+    box-shadow: 5px 8px 5px #d8d5d5;
 }
 
 .poploc>figure{
@@ -368,8 +386,8 @@ Hebergement en ligne et wrap, supprime le stretch et espaceNliste et pliste */
   height: 100%;
   object-fit: cover;
   overflow: hidden;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
 }
 
 .star{
@@ -408,7 +426,7 @@ Mon id activite enfant de main */
 .partie{
     display: flex;
     flex-direction: column;
-    flex-basis: 22%;
+    flex-basis: 23%;
     height: 540px;
     margin-bottom: 40px;
 }
@@ -456,7 +474,7 @@ Mon id activite enfant de main */
     margin:auto;
     border-radius: 15px;
     width: 97%;
-    box-shadow: 10px 10px 5px #f2f2f2;
+    box-shadow: 5px 8px 5px #d8d5d5;
     height: 100%;
 }
 
@@ -572,7 +590,10 @@ Apparait uniquement dans le responsive smartphone */
       width: 100%;
       margin:0px;
     }
-
+    header,form,#filtre{
+      width: 95%;
+      margin:auto;
+    }
     /* pour le responsive,évite un collment des élément trop rapide */
     nav{
         flex-basis:70%
@@ -586,7 +607,7 @@ Apparait uniquement dans le responsive smartphone */
     #filtre ul{padding: 0}
     /* Change mon espace utile pour mes enfants pour avoir une autre disposition */
     .loc{ 
-      flex-basis:42%;
+      flex-basis:41%;
       margin:20px 0;
     }
 
@@ -639,14 +660,15 @@ Apparait uniquement dans le responsive smartphone */
     }
     .mobile{
         display: inline;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
         border-left: none;
         border-color: #0065fc;
         background-color: #0065fc;
-        padding: 10px 10px;
+        padding: 16px 15px;
         color: white;
         margin-left: -4px;
+        height: 50px;
     }
 
     #activite{
@@ -733,18 +755,23 @@ Apparait uniquement dans le responsive smartphone */
             }
 
             #titres{
-              flex-basis: 95%;
+              flex-basis: 96%;
               margin: auto;
             }
 
             /* Filtre 
             -----------------------------------------
             -----------------------------------------*/
+            form,
+            #filtre{
+              width: 96%;
+            }
             #filtre ul{
               padding: 0;
+              flex-basis: 80%;
             }
             #filtre ul li {
-              margin:10px;
+              margin:10px 20px 10px 0;
             }
 
            /* Section hebergement ---------------------
@@ -761,7 +788,6 @@ Apparait uniquement dans le responsive smartphone */
             #nliste figure{
               border:2px white solid;
               border-radius: 15px;
-              box-shadow: 10px 10px 5px #f2f2f2 ;
             }
 
             /* Section activite
@@ -843,6 +869,6 @@ Apparait uniquement dans le responsive smartphone */
           #Apropos,
           #NosHeb,
           #Assistance{
-            margin-left: 40px;
+            margin-left: 20px;
           }
 }
