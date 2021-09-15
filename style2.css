@@ -253,6 +253,8 @@ Hebergement en ligne et wrap, supprime le stretch et espaceNliste et pliste */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: white;
+  border-radius: 25px;
 }
 
 /*taille de Nliste, arrondi de bordure... */
@@ -283,7 +285,6 @@ Hebergement en ligne et wrap, supprime le stretch et espaceNliste et pliste */
     flex-basis: 28%;
     border: 4px white solid;
     border-radius: 25px;
-    background-color: white;
     box-shadow: 5px 8px 5px #d8d5d5;
     margin-bottom: 15px;
 }
@@ -307,10 +308,7 @@ Hebergement en ligne et wrap, supprime le stretch et espaceNliste et pliste */
     border-top-right-radius: 25px;
 }
 
-/* utilise l'espace disponible */
-#nliste figcaption{
-    margin-top: 10px;
-}
+
 
 /* Créer une marge dans tout les elements enfant de figcaption */
 .ancre_figcaption *{
