@@ -352,7 +352,7 @@ Hebergement en ligne et wrap, supprime le stretch et espaceNliste et pliste */
     border:4px white solid;
     border-radius: 25px;
     background-color: white;
-    margin:0px 30px 45px;
+    margin:0px 30px 35px;
     box-shadow: 5px 8px 5px #d8d5d5;
 }
 
@@ -420,7 +420,7 @@ Mon id activite enfant de main */
 /* Mon titre de la section loisir */
 #l_titre{
     flex-basis: 100%;
-    margin:40px 10px 10px 0px;
+    margin:40px 10px 10px 2px;
 }
 
 /* 4 grand élement, eux meme divise par la suite  */
