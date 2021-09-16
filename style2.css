@@ -593,7 +593,7 @@ Apparait uniquement dans le responsive smartphone */
     }
     header,form,#filtre{
       width: 95%;
-      margin:auto;
+      
     }
     /* pour le responsive,évite un collment des élément trop rapide */
     nav{
