@@ -756,7 +756,7 @@ Apparait uniquement dans le responsive smartphone */
             }
 
             #titres{
-              flex-basis: 96%;
+              flex-basis: 90%;
               margin: auto;
             }
 
@@ -765,8 +765,10 @@ Apparait uniquement dans le responsive smartphone */
             -----------------------------------------*/
             form,
             #filtre{
-              width: 96%;
+              width: 90%;
             }
+
+            
             #filtre ul{
               padding: 0;
               flex-basis: 90%;
@@ -844,6 +846,9 @@ Apparait uniquement dans le responsive smartphone */
 -----------------------------------------------------------------------------
 ------------------------------------------------------------------------------ */
 @media (max-width:600px){
+
+
+          
         
           .poploc figure,
           #nliste img,
